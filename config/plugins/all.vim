@@ -420,7 +420,7 @@ if dein#tap('ctrlp.vim')
 		\ 'dir':  '\v[\/]\.(git|hg|svn)$',
 		\ 'file': '\v\.(exe|so|dll|swp|pyc|pyo)$',
 		\ }
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+	let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
 
 if dein#tap('scss-syntax.vim')
@@ -465,7 +465,7 @@ if dein#tap('syntastic')
 	"https://github.com/vim-syntastic/syntastic
 	let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['yaml'],'passive_filetypes': ['php']  }
 	nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-	command S SyntasticCheck
+	command SY SyntasticCheck
 	let g:syntastic_enable_javascript_checker = 1
 	let g:syntastic_javascript_eslint_exec = '/Users/pegasus/.nvm/versions/node/v4.0.0/bin/eslint'
 	let g:syntastic_javascript_checkers = ['eslint']
