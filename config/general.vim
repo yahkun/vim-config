@@ -82,7 +82,7 @@ endif
 " }}}
 " Tabs and Indents {{{
 " ----------------
-set textwidth=80    " Text width maximum chars before wrapping
+set textwidth=120    " Text width maximum chars before wrapping
 set noexpandtab     " Don't expand tabs to spaces.
 set tabstop=2       " The number of spaces a tab is
 set softtabstop=2   " While performing editing operations
@@ -169,7 +169,7 @@ set cmdheight=2         " Height of the command line
 set cmdwinheight=5      " Command-line lines
 set noequalalways       " Don't resize windows on split or close
 set laststatus=2        " Always show a status line
-set colorcolumn=80      " Highlight the 80th character limit
+set colorcolumn=120      " Highlight the 80th character limit
 set display=lastline
 
 " Do not display completion messages

@@ -311,6 +311,7 @@ endif
 if dein#tap('vim-easymotion')
 	map <Leader><Leader>w <Plug>(easymotion-w)
 	map <Leader><Leader>f <Plug>(easymotion-f)
+	map <Leader><Leader>b <Plug>(easymotion-b)
 	" nmap ss <Plug>(easymotion-s2)
 	" nmap sd <Plug>(easymotion-s)
 	" nmap sf <Plug>(easymotion-overwin-f)
