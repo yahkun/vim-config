@@ -32,7 +32,6 @@
 - repo: jiangmiao/auto-pairs
 - repo: kien/rainbow_parentheses.vim
 - repo: kien/ctrlp.vim
-- repo: scrooloose/nerdcommenter
 - repo: haya14busa/incsearch.vim
 - repo: haya14busa/incsearch-fuzzy.vim
 - repo: rafi/awesome-vim-colorschemes
@@ -162,7 +161,7 @@
   hook_post_source: source $VIMPATH/config/plugins/nerdtree.vim
 
 # - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
-# - { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
+- { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
 - { repo: t9md/vim-choosewin, on_map: { n: <Plug> }}
 - { repo: Shougo/vinarise.vim, on_cmd: Vinarise }
 - { repo: kana/vim-niceblock, on_map: { x: <Plug> }}

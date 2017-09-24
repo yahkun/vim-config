@@ -298,8 +298,8 @@ if dein#tap('CamelCaseMotion')
 endif
 
 if dein#tap('vim-commentary')
-	xmap <Leader>v  <Plug>Commentary
-	nmap <Leader>v  <Plug>CommentaryLine
+	xmap <Leader>c  <Plug>Commentary
+	nmap <Leader>c  <Plug>CommentaryLine
 	xmap gc  <Plug>Commentary
 	nmap gc  <Plug>Commentary
 	omap gc  <Plug>Commentary
@@ -309,17 +309,19 @@ if dein#tap('vim-commentary')
 endif
 
 if dein#tap('vim-easymotion')
-	nmap ss <Plug>(easymotion-s2)
-	nmap sd <Plug>(easymotion-s)
-	nmap sf <Plug>(easymotion-overwin-f)
-	map  sh <Plug>(easymotion-linebackward)
-	map  sl <Plug>(easymotion-lineforward)
-	" map  sj <Plug>(easymotion-j)
-	" map  sk <Plug>(easymotion-k)
-	map  s/ <Plug>(easymotion-sn)
-	omap s/ <Plug>(easymotion-tn)
-	map  sn <Plug>(easymotion-next)
-	map  sp <Plug>(easymotion-prev)
+	map <Leader><Leader>w <Plug>(easymotion-w)
+	map <Leader><Leader>f <Plug>(easymotion-f)
+	" nmap ss <Plug>(easymotion-s2)
+	" nmap sd <Plug>(easymotion-s)
+	" nmap sf <Plug>(easymotion-overwin-f)
+	" map  sh <Plug>(easymotion-linebackward)
+	" map  sl <Plug>(easymotion-lineforward)
+	" " map  sj <Plug>(easymotion-j)
+	" " map  sk <Plug>(easymotion-k)
+	" map  s/ <Plug>(easymotion-sn)
+	" omap s/ <Plug>(easymotion-tn)
+	" map  sn <Plug>(easymotion-next)
+	" map  sp <Plug>(easymotion-prev)
 endif
 
 if dein#tap('vim-textobj-multiblock')
