@@ -383,9 +383,6 @@ if dein#tap('python-mode')
 	let g:pymode_lint_on_fly = 0
 	let g:pymode_lint_message = 1
 	let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
-	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
-	command PL PymodeLint
-	command PA PymodeLintAuto    " auto pep8 fix
 	let g:syntastic_python_checkers = ['pylint']
 	let g:pymode_lint_ignore = "C0111, W0105, C0325"
 	let g:pymode_lint_signs = 1
@@ -400,6 +397,9 @@ if dein#tap('python-mode')
 	let g:pymode_options_colorcolumn = 1
 	" 指定UltiSnips python的docstring风格, sphinx, google, numpy
 	let g:ultisnips_python_style = 'sphinx'
+	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
+	command PL PymodeLint
+	command PA PymodeLintAuto    " auto fix pep8
 endif
 
 if dein#tap('InstantRst')
