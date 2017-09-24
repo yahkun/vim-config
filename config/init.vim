@@ -5,8 +5,10 @@
 " Global Mappings "{{{
 " Use spacebar as leader and ; as secondary-leader
 " Required before loading plugins!
-let g:mapleader="\<Space>"
+" let g:mapleader="\<Space>"
+let g:mapleader=","
 let g:maplocalleader=';'
+let g:python3_host_prog='/usr/local/bin/python3'
 
 " Release keymappings prefixes, evict entirely for use of plug-ins.
 nnoremap <Space>  <Nop>

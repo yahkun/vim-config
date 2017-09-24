@@ -12,8 +12,8 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeBookmarksFile = $VARPATH.'/treemarks'
 let NERDTreeIgnore = [
-	\ '\.git$', '\.hg$', '\.svn$', '\.stversions$', '\.pyc$', '\.svn$',
-	\ '\.DS_Store$', '\.sass-cache$', '__pycache__$', '\.egg-info$'
+			\ '\.git$', '\.hg$', '\.svn$', '\.stversions$', '\.pyc$', '\.pyo$', '\.svn$', '\.swp$',
+			\ '\.DS_Store$', '\.sass-cache$', '__pycache__$', '\.egg-info$', '\.ropeproject$',
 	\ ]
 
 autocmd MyAutoCmd FileType nerdtree call s:nerdtree_settings()

@@ -238,4 +238,8 @@ endfunction
 
 " }}}
 
+" Setting up how to display whitespace characters
+set list
+set listchars=tab:⇥\ ,trail:·,extends:⋯,precedes:⋯,nbsp:~
+
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

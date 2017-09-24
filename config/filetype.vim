@@ -137,4 +137,16 @@ let g:perl_fold = 1
 " }}}
 " }}}
 
+" for html
+autocmd BufNewFile,BufRead *.html setlocal expandtab tabstop=2 shiftwidth=2
+let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!' ]
+
+" for json
+let g:vim_json_syntax_conceal = 0
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+
+" sudo pip install yamllint
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+let g:syntastic_yaml_checkers = ['yamllint']
+
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

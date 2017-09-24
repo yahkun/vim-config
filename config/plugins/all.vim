@@ -57,6 +57,9 @@ if dein#tap('tagbar')
 	" Also use h/l to open/close folds
 	let g:tagbar_map_closefold = ['h', '-', 'zc']
 	let g:tagbar_map_openfold = ['l', '+', 'zo']
+	" for Tagbarbar, sudo apt-get install ctags
+	nnoremap <silent> <F8> :TagbarToggle<CR>
+	nnoremap <leader>t :TagbarToggle<CR>
 endif
 
 if dein#tap('nerdtree')
@@ -68,6 +71,9 @@ if dein#tap('nerdtree')
 	let g:NERDTreeMapOpenRecursively = 't'
 	let g:NERDTreeMapCloseChildren = 'T'
 	let g:NERDTreeMapToggleHidden = '.'
+
+	nmap ,v :NERDTreeFind<cr>
+	nmap ,g :NERDTreeToggle<cr>
 
 	nnoremap <silent> <LocalLeader>e :<C-u>NERDTreeToggle<CR>
 	nnoremap <silent> <LocalLeader>a :<C-u>NERDTreeFind<CR>
@@ -84,7 +90,7 @@ endif
 if dein#tap('emmet-vim')
 	autocmd MyAutoCmd FileType html,css,jsx,javascript,javascript.jsx
 		\ EmmetInstall
-		\ | imap <buffer> <C-Return> <Plug>(emmet-expand-abbr)
+		\ | imap <buffer> <C-j> <Plug>(emmet-expand-abbr)
 endif
 
 if dein#tap('vim-operator-surround')
@@ -328,6 +334,191 @@ if dein#tap('vim-textobj-function')
 	omap <silent> if <Plug>(textobj-function-i)
 	xmap <silent> af <Plug>(textobj-function-a)
 	xmap <silent> if <Plug>(textobj-function-i)
+endif
+
+if dein#tap('incsearch.vim')
+	" 模糊搜索，使用z/支持模糊搜索
+	map z/ <Plug>(incsearch-fuzzy-/)
+	map z? <Plug>(incsearch-fuzzy-?)
+	map zg/ <Plug>(incsearch-fuzzy-stay)
+endif
+
+if dein#tap('vim-pydocstring')
+	nmap <silent> <C-d> <Plug>(pydocstring)
+endif
+
+if dein#tap('python-mode')
+	let g:pymode_python = 'python'  " Values are `python`, `python3`, `disable`.
+	let g:pymode_trim_whitespaces = 1
+	let g:pymode_quickfix_maxheight = 3
+	let g:pymode_indent = 1
+	let g:pymode_folding = 1
+	let g:pymode_breakpoint = 1
+	let g:pymode_breakpoint_bind = "<C-k>"
+	let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()  # BREAKPOINT TODO REMOVE; from nose.tools import set_trace; set_trace()'
+
+	let g:pymode_run = 1
+	let g:pymode_run_bind = "<C-e>"
+	"let g:pymode_run_bind = '<leader>r'
+	let g:pymode_virtualenv = 1
+
+	" Override view python doc key shortcut to Ctrl-Shift-d
+	let g:pymode_doc=1
+	let g:pymode_doc_bind = 'K'
+
+	autocmd CompleteDone * pclose
+	let g:pymode_rope = 1
+	let g:pymode_rope_autoimport = 0
+	let g:pymode_rope_lookup_project = 0
+	let g:pymode_rope_goto_definition_bind = "<C-j>"
+	let g:pymode_rope_goto_definition_cmd = 'vnew'
+	let g:pymode_rope_regenerate_on_write = 0
+	command PR PymodeRopeRegenerate
+
+	let g:pymode_lint = 1
+	let g:pymode_lint_on_write = 1
+	let g:pymode_lint_on_fly = 0
+	let g:pymode_lint_message = 1
+	let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
+	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
+	command PL PymodeLint
+	command PA PymodeLintAuto    " auto pep8 fix
+	let g:syntastic_python_checkers = ['pylint']
+	let g:pymode_lint_ignore = "C0111, W0105, C0325"
+	let g:pymode_lint_signs = 1
+	let g:pymode_lint_todo_symbol = '😡'
+	let g:pymode_lint_error_symbol = '❌'
+	let g:pymode_lint_comment_symbol = '😢'
+
+	" 修改默认的红线为浅色，solorized黑色主题
+	highlight ColorColumn ctermbg=233
+	let g:pymode_lint_cwindow = 0
+	let g:pymode_options_max_line_length = 120
+	let g:pymode_options_colorcolumn = 1
+	" 指定UltiSnips python的docstring风格, sphinx, google, numpy
+	let g:ultisnips_python_style = 'sphinx'
+endif
+
+if dein#tap('InstantRst')
+	" rst书写插件
+	let proj1 = { 'path': '~/Program/python-web-guide',}
+	let g:riv_projects = [proj1]
+endif
+
+if dein#tap('vim-instant-markdown')
+	let g:instant_markdown_autostart = 0
+	let g:vim_markdown_conceal = 0
+endif
+
+if dein#tap('ctrlp.vim')
+	" ctrlp, 在~/.agignore添加一行node_modules
+	set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+	let g:ctrlp_custom_ignore = {
+		\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+		\ 'file': '\v\.(exe|so|dll|swp|pyc|pyo)$',
+		\ }
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
+
+if dein#tap('scss-syntax.vim')
+	"http://vimawesome.com/plugin/scss-syntax-vim
+	au BufRead,BufNewFile *.scss set filetype=scss.css
+endif
+
+if dein#tap('rainbow_parentheses.vim')
+	"http://vimawesome.com/plugin/rainbow-parentheses-vim   花里胡哨的彩虹括号^_^
+	"http://www.wklken.me/posts/2015/06/07/vim-plugin-rainbowparentheses.html
+	let g:rbpt_colorpairs = [
+			\ ['brown',       'RoyalBlue3'],
+			\ ['Darkblue',    'SeaGreen3'],
+			\ ['darkgray',    'DarkOrchid3'],
+			\ ['darkgreen',   'firebrick3'],
+			\ ['darkcyan',    'RoyalBlue3'],
+			\ ['darkred',     'SeaGreen3'],
+			\ ['darkmagenta', 'DarkOrchid3'],
+			\ ['brown',       'firebrick3'],
+			\ ['gray',        'RoyalBlue3'],
+			\ ['darkmagenta', 'DarkOrchid3'],
+			\ ['Darkblue',    'firebrick3'],
+			\ ['darkgreen',   'RoyalBlue3'],
+			\ ['darkcyan',    'SeaGreen3'],
+			\ ['darkred',     'DarkOrchid3'],
+			\ ['red',         'firebrick3'],
+			\ ]
+
+	" 不加入这行, 防止黑色括号出现, 很难识别
+	" \ ['black',       'SeaGreen3'],
+
+	let g:rbpt_max = 16
+	let g:rbpt_loadcmd_toggle = 0
+	au VimEnter * RainbowParenthesesToggle
+	au Syntax * RainbowParenthesesLoadRound
+	au Syntax * RainbowParenthesesLoadSquare
+	au Syntax * RainbowParenthesesLoadBraces
+endif
+
+
+if dein#tap('syntastic')
+	"https://github.com/vim-syntastic/syntastic
+	let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['yaml'],'passive_filetypes': ['php']  }
+	nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+	command S SyntasticCheck
+	let g:syntastic_enable_javascript_checker = 1
+	let g:syntastic_javascript_eslint_exec = '/Users/pegasus/.nvm/versions/node/v4.0.0/bin/eslint'
+	let g:syntastic_javascript_checkers = ['eslint']
+	let g:syntastic_always_populate_loc_list = 1
+	let g:syntastic_check_on_open = 0
+	let g:syntastic_check_on_wq = 1
+	let g:syntastic_always_populate_loc_list = 1
+	let g:syntastic_loc_list_height = 3
+
+	let g:syntastic_error_symbol = '❌'
+	let g:syntastic_style_error_symbol = '❗'
+	let g:syntastic_warning_symbol = '⚠️'
+	let g:syntastic_style_warning_symbol = '💩'
+
+	highlight link SyntasticErrorSign SignColumn
+	highlight link SyntasticWarningSign SignColumn
+	highlight link SyntasticStyleErrorSign SignColumn
+	highlight link SyntasticStyleWarningSign SignColumn
+endif
+
+if dein#tap('vim-go')
+	" for golang https://github.com/fatih/vim-go
+	" https://github.com/fatih/vim-go-tutorial
+	let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+	"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+	set autowrite
+	autocmd FileType go nmap <leader>b  <Plug>(go-build)
+	autocmd FileType go nmap <leader>r  <Plug>(go-run)
+	let g:go_list_type = "quickfix"
+	autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+	let g:go_metalinter_autosave_enabled = ['golint']
+	let g:go_metalinter_autosave = 1
+endif
+
+if dein#tap('vim-interestingwords')
+	" https://github.com/lfv89/vim-interestingwords 高亮感兴趣的 word
+	nnoremap <silent> <leader>f :call InterestingWords('n')<cr>
+	nnoremap <silent> <leader>F :call UncolorAllWords()<cr>
+endif
+
+if dein#tap('vim-startify')
+	" 禁止 startify 自动切换目录
+	let g:startify_change_to_dir = 0
+endif
+
+if dein#tap('vim-youdao-translater')
+	" https://github.com/ianva/vim-youdao-translater settings
+	vnoremap <silent> <C-Y> :<C-u>Ydv<CR>
+	nnoremap <silent> <C-Y> :<C-u>Ydc<CR>
+	noremap <leader>yd :<C-u>Yde<CR>
+endif
+
+if dein#tap('toggle-numbers.vim')
+	" Plugin 'fullybaked/toggle-numbers.vim'
+	nmap ,n :LineNumberToggle<cr>
 endif
 
 " vim: set ts=2 sw=2 tw=80 noet :

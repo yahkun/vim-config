@@ -336,4 +336,52 @@ function! s:SweepBuffers() " {{{
 endfunction " }}}
 " }}}
 
+set pastetoggle=<F2>
+map <F4> :%retab! <CR> :w <CR>
+set noautochdir    " 注意这个自动切换目录会使rope找目录不正确，禁用，坑死我
+" 退出快捷键
+inoremap jj <Esc>`^
+inoremap <C-k> <Esc>`^
+noremap <leader>e :q<cr>
+noremap <leader>E :qa!<cr>
+noremap <leader>b :bd<cr>
+noremap <leader>s :vs<cr>  " vertical split
+noremap <leader>r :e!<cr>  " reload without save
+
+" nnoremap py :!python %<cr>
+" 用ctrl+l可以在insert和command模式都可以保存
+inoremap <c-l> <c-o>:w<cr>
+nnoremap <c-l> :w<cr>
+" 切换 buffer
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> [n :bnext<CR>
+
+
+" shortcuts to vimdiff, http://stackoverflow.com/questions/7309707/why-does-git-mergetool-opens-4-windows-in-vimdiff-id-expect-3
+let mapleader=','
+let g:mapleader=','
+
+if &diff
+    map <leader>1 :diffget LOCAL<CR>
+    map <leader>2 :diffget BASE<CR>
+    map <leader>3 :diffget REMOTE<CR>
+endif
+
+
+" change tab
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+" https://stackoverflow.com/questions/15583346/how-can-i-temporarily-make-the-window-im-working-on-to-be-fullscreen-in-vim
+nnoremap tt :tab split<CR>
+
+" Sudo to write
+cnoremap w!! w !sudo tee % >/dev/null
+
+" 用 ,a 搜索当前 cursor 下单词
+noremap <leader>a :Ag! -w "<cword>"<cr>
+
+" add :FormatJSON command
+com! FormatJSON %!python -m json.tool
+
+
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

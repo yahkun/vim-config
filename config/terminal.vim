@@ -1,3 +1,4 @@
+" https://github.com/icymind/NeoSolarized
 " Vim Only Terminal Tweaks: Colors, cursor shape, and tmux
 "---------------------------------------------------------
 
