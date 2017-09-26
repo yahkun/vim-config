@@ -523,6 +523,7 @@ endif
 if dein#tap('toggle-numbers.vim')
 	" Plugin 'fullybaked/toggle-numbers.vim'
 	nmap ,n :LineNumberToggle<cr>
+	nnoremap <C-m> :LineNumberToggle<cr>
 endif
 
 " vim: set ts=2 sw=2 tw=80 noet :

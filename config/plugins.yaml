@@ -17,7 +17,7 @@
 - repo: itchyny/vim-cursorword
 - repo: ianva/vim-youdao-translater
 - repo: ntpeters/vim-better-whitespace
-- repo: fullybaked/toggle-numbers.vim
+# - repo: fullybaked/toggle-numbers.vim
 - repo: lfv89/vim-interestingwords
 - repo: terryma/vim-multiple-cursors
 - repo: tpope/vim-repeat
