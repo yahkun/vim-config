@@ -348,10 +348,10 @@ noremap <leader>b :bd<cr>
 noremap <leader>s :vs<cr>  " vertical split
 noremap <leader>r :e!<cr>  " reload without save
 
-" nnoremap py :!python %<cr>
-" 用ctrl+l可以在insert和command模式都可以保存
-inoremap <c-l> <c-o>:w<cr>
-nnoremap <c-l> :w<cr>
+" Write buffer (save)
+noremap <Leader>w :w<CR>
+imap ,w <esc>:w<CR>
+
 " 切换 buffer
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> [n :bnext<CR>
