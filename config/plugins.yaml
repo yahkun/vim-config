@@ -29,7 +29,7 @@
 - repo: junegunn/gv.vim    # git commit browser
 - repo: vim-scripts/BufOnly.vim
 - repo: godlygeek/tabular
-- repo: jiangmiao/auto-pairs
+# - repo: jiangmiao/auto-pairs
 - repo: kien/rainbow_parentheses.vim
 - repo: kien/ctrlp.vim
 - repo: haya14busa/incsearch.vim
@@ -357,11 +357,11 @@
   on_event: CompleteDone
   hook_post_source: call echodoc#enable()
 
-# - repo: Raimondi/delimitMate
-#   on_i: 1
-#   hook_source: |
-#     let g:delimitMate_expand_cr = 1
-#     let g:delimitMate_excluded_ft = 'html'
+- repo: Raimondi/delimitMate
+  on_i: 1
+  hook_source: |
+    let g:delimitMate_expand_cr = 1
+    let g:delimitMate_excluded_ft = 'html'
 
 - { repo: Shougo/neosnippet-snippets, if: empty($VIM_MINIMAL) }
 - { repo: Shougo/context_filetype.vim, lazy: 1, if: empty($VIM_MINIMAL) }

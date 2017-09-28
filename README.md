@@ -674,3 +674,27 @@ Big thanks to the dark knight [Shougo].
 [Shougo]: https://github.com/Shougo
 [lazy-loaded]: ./config/plugins.yaml#L21
 [yaml2json]: https://github.com/koraa/large-yaml2json-json2yaml
+
+## Tmux & Theme
+https://github.com/icymind/NeoSolarized
+
+You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:  
+```vim
+set t_8f=^[[38;2;%lu;%lu;%lum
+set t_8b=^[[48;2;%lu;%lu;%lum
+```
+The '^[' represent the escape char. You should press <kbd>Ctrl-v</kbd> + <kbd>Esc</kbd> to input actual escape. If the ^[ is two characters (^ and [), it's wrong. If it is one character, it's okay. When you delete the character with backspace, you will find that ^[ is deleted at once. Please also check
+:help c_CTRL-V (and :help i_CTRL-V).
+check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more information.
+
+
+neovim works perfect without this config.  If you encounter a color issue using tmux, make sure that:  
+- you are using the latest version of tmux (v2.2)
+- your $TERM variable is set to "xterm-256color"
+- add the line below to your .tmux.conf file:
+
+    ```tmux
+    set-option -ga terminal-overrides ",xterm-256color:Tc"
+    ```
+
+See this [article](https://deductivelabs.com/en/2016/03/using-true-color-vim-tmux/) for more details on tmux.
