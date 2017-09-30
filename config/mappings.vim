@@ -336,18 +336,6 @@ function! s:SweepBuffers() " {{{
 endfunction " }}}
 " }}}
 
-set pastetoggle=<F2>
-map <F4> :%retab! <CR> :w <CR>
-set noautochdir    " 注意这个自动切换目录会使rope找目录不正确，禁用，坑死我
-" 退出快捷键
-inoremap jj <Esc>`^
-inoremap <C-k> <Esc>`^
-noremap <leader>e :q<cr>
-noremap <leader>E :qa!<cr>
-noremap <leader>b :bd<cr>
-noremap <leader>s :vs<cr>  " vertical split
-noremap <leader>r :e!<cr>  " reload without save
-
 " Write buffer (save)
 noremap <Leader>w :w<CR>
 imap ,w <esc>:w<CR>
@@ -383,5 +371,17 @@ noremap <leader>a :Ag! -w "<cword>"<cr>
 " add :FormatJSON command
 com! FormatJSON %!python -m json.tool
 
+set pastetoggle=<F2>
+map <F4> :%retab! <CR> :w <CR>
+set noautochdir    " 注意这个自动切换目录会使rope找目录不正确，禁用，坑死我
+
+" 退出快捷键
+inoremap jj <Esc>`^
+inoremap <C-k> <Esc>`^
+noremap <leader>e :q<cr>
+noremap <leader>E :qa!<cr>
+noremap <leader>b :bd<cr>
+noremap <leader>s :vs<cr>  " vertical split
+noremap <leader>r :e!<cr>  " reload without save
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

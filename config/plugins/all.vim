@@ -381,7 +381,7 @@ if dein#tap('python-mode')
 
 	let g:pymode_lint = 1
 	let g:pymode_lint_on_write = 1
-	let g:pymode_lint_on_fly = 0
+	let g:pymode_lint_on_fly = 1
 	let g:pymode_lint_message = 1
 	let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
 	let g:syntastic_python_checkers = ['pylint']
