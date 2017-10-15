@@ -5,7 +5,7 @@
 # Startup
 # -------
 - repo: Shougo/dein.vim
-# - repo: rafi/vim-badge
+- repo: rafi/vim-badge
 - repo: thinca/vim-localrc
 - repo: christoomey/vim-tmux-navigator
 - repo: junegunn/vim-peekaboo    # See the contents of registers
