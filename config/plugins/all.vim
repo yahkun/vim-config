@@ -546,7 +546,7 @@ endif
 
 if dein#tap('Yggdroot/indentLine')
 	autocmd FileType * IndentLinesEnable
-	autocmd VimEnter,BufEnter,BufRead,BufWinEnter,WinEnter,BufNewFile * IndentLinesEnable
+	autocmd VimEnter,BufEnter,BufRead,BufWinEnter,WinEnter,BufNewFile,TabEnter * IndentLinesEnable
 endif
 
 " vim: set ts=2 sw=2 tw=80 noet :
