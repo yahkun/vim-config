@@ -167,7 +167,7 @@ set previewheight=12    " Completion preview height
 set noshowcmd           " Don't show command in status line
 set cmdheight=2         " Height of the command line
 set cmdwinheight=5      " Command-line lines
-set noequalalways       " Don't resize windows on split or close
+" set noequalalways       " Don't resize windows on split or close
 set laststatus=2        " Always show a status line
 set colorcolumn=120      " Highlight the 80th character limit
 set display=lastline
