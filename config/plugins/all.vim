@@ -53,6 +53,8 @@ endif
 
 if dein#tap('tagbar')
 	nnoremap <silent> <Leader>o   :<C-u>TagbarOpenAutoClose<CR>
+	" sort by sourcefile
+	let g:tagbar_sort = 0
 
 	" Also use h/l to open/close folds
 	let g:tagbar_map_closefold = ['h', '-', 'zc']
