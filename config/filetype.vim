@@ -138,6 +138,7 @@ let g:perl_fold = 1
 " }}}
 
 " for html
+" autocmd BufNewFile,BufRead *.html setlocal filetype=html
 autocmd BufNewFile,BufRead *.html setlocal expandtab tabstop=2 shiftwidth=2 sts=2
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!' ]
