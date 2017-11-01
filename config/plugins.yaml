@@ -38,6 +38,7 @@
 - repo: bling/vim-airline
 - repo: vim-airline/vim-airline-themes
 - repo: Yggdroot/indentLine
+- repo: sheerun/vim-polyglot
   hook_add: |
     autocmd MyAutoCmd FileType denite,qf,nerdtree let b:cursorword=0
     autocmd MyAutoCmd InsertEnter * let b:cursorword=0
@@ -57,7 +58,6 @@
 - { repo: pearofducks/ansible-vim, on_ft: ansible }
 - { repo: mitsuhiko/vim-jinja, on_ft: [ htmljinja, jinja ]}
 - { repo: mustache/vim-mustache-handlebars, on_ft: html }
-- { repo: solarnz/thrift.vim, on_ft: thrift}
 - { repo: Rykka/InstantRst, on_ft: rst}
 - { repo: suan/vim-instant-markdown, on_ft: markdown}
 
