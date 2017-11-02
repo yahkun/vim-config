@@ -8,6 +8,7 @@
 " let g:mapleader="\<Space>"
 let g:mapleader=","
 let g:maplocalleader=';'
+let g:python3_host_skip_check=1
 let g:python3_host_prog='/usr/local/bin/python3'
 
 " Release keymappings prefixes, evict entirely for use of plug-ins.
@@ -74,7 +75,7 @@ let g:loaded_netrwSettings = 1
 let g:loaded_rrhelper = 1
 let g:loaded_ruby_provider = 1
 let g:loaded_shada_plugin = 1
-let g:loaded_spellfile_plugin  = 1
+let g:loaded_spellfile_plugin = 1
 let g:loaded_tar = 1
 let g:loaded_tarPlugin = 1
 let g:loaded_tutor_mode_plugin = 1
