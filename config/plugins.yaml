@@ -31,7 +31,7 @@
 - repo: godlygeek/tabular
 # - repo: jiangmiao/auto-pairs
 # - repo: kien/rainbow_parentheses.vim
-- repo: kien/ctrlp.vim
+- repo: ctrlpvim/ctrlp.vim
 - repo: haya14busa/incsearch.vim
 - repo: haya14busa/incsearch-fuzzy.vim
 - repo: rafi/awesome-vim-colorschemes
