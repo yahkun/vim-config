@@ -70,7 +70,7 @@
     let g:html5_aria_attributes_complete = 0
 
 - repo: gregsexton/MatchTag
-  on_ft: html
+  on_ft: [ html, htmldjango ]
 
 - repo: plasticboy/vim-markdown
   on_ft: markdown
@@ -164,6 +164,7 @@
   hook_post_source: source $VIMPATH/config/plugins/nerdtree.vim
 
 # - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
+# - { repo: ryanoasis/vim-devicons, on_source: nerdtree}
 - { repo: tpope/vim-commentary, on_map: <Plug>Commentary }
 - { repo: t9md/vim-choosewin, on_map: { n: <Plug> }}
 - { repo: Shougo/vinarise.vim, on_cmd: Vinarise }
