@@ -195,7 +195,7 @@
   on_cmd: TagbarToggle
   hook_source: |
     let g:tagbar_autofocus = 1
-    let g:tagbar_sort = 0    # sort by sourcefile
+    let g:tagbar_sort = 0
     let g:tagbar_width = 40
     if executable('jsctags')
       let g:tagbar_type_javascript = { 'ctagsbin': 'jsctags' }
