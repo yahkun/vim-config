@@ -50,6 +50,8 @@ augroup MyAutoCmd " {{{
 
 	autocmd FileType crontab setlocal nobackup nowritebackup
 
+	autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
+
 	autocmd FileType docker-compose setlocal expandtab
 
 	autocmd FileType gitcommit setlocal spell
@@ -61,18 +63,25 @@ augroup MyAutoCmd " {{{
 
 	autocmd FileType zsh setlocal foldenable foldmethod=marker
 
-	autocmd FileType html setlocal path+=./;/
+	autocmd FileType html
+		\ setlocal path+=./;/
+		\ | setlocal equalprg=tidy\ -i\ -q
+
+	autocmd FileType json setlocal equalprg=python\ -c\ json.tool
 
 	autocmd FileType markdown
-		\ setlocal expandtab autoindent
-			\ formatoptions=tcroqn2 comments=n:>
+		\ set expandtab
+		\ | setlocal spell autoindent formatoptions=tcroqn2 comments=n:>
 
 	autocmd FileType apache setlocal path+=./;/
 
 	autocmd FileType cam setlocal nonumber synmaxcol=10000
 
 	autocmd FileType go highlight default link goErr WarningMsg |
-				\ match goErr /\<err\>/
+		\ match goErr /\<err\>/
+
+	autocmd FileType xml
+		\ setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 augroup END " }}}
 
@@ -136,19 +145,5 @@ let g:php_phpdoc_folding = 1
 let g:perl_fold = 1
 " }}}
 " }}}
-
-" for html
-" autocmd BufNewFile,BufRead *.html setlocal filetype=html
-autocmd BufNewFile,BufRead *.html setlocal expandtab tabstop=2 shiftwidth=2 sts=2
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-let g:syntastic_html_tidy_ignore_errors = [ '<template> is not recognized!' ]
-
-" for json
-let g:vim_json_syntax_conceal = 0
-autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
-
-" sudo pip install yamllint
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-let g:syntastic_yaml_checkers = ['yamllint']
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
