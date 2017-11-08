@@ -126,7 +126,7 @@
     let g:go_highlight_extra_types = 1
     let g:go_highlight_operators = 1
 
-- { repo: klen/python-mode, on_ft: python}
+- { repo: python-mode/python-mode, on_ft: python}
 - { repo: heavenshell/vim-pydocstring, on_ft: python}
 - { repo: vim-python/python-syntax, on_ft: python }
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
