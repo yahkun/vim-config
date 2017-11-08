@@ -376,6 +376,7 @@ endif
 
 if dein#tap('python-mode')
 	let g:pymode_python = 'python'  " Values are `python`, `python3`, `disable`.
+	let g:pymode_paths = split(globpath('/Users/wnn/zhihu/lens/eggs', '*'), '\n')     " support buildout
 	let g:pymode_trim_whitespaces = 1
 	let g:pymode_quickfix_maxheight = 3
 	let g:pymode_indent = 1
@@ -388,6 +389,7 @@ if dein#tap('python-mode')
 	let g:pymode_run_bind = "<C-e>"
 	"let g:pymode_run_bind = '<leader>r'
 	let g:pymode_virtualenv = 1
+	let g:pymode_virtualenv_path = $VIRTUAL_ENV
 
 	" Override view python doc key shortcut to Ctrl-Shift-d
 	let g:pymode_doc=1
@@ -405,15 +407,16 @@ if dein#tap('python-mode')
 
 	let g:pymode_lint = 1
 	let g:pymode_lint_on_write = 1
-	let g:pymode_lint_on_fly = 1
+	let g:pymode_lint_on_fly = 0
 	let g:pymode_lint_message = 1
 	let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
 	let g:syntastic_python_checkers = ['pylint']
-	let g:pymode_lint_ignore = "C0111, W0105, C0325"
+	let g:pymode_lint_ignore = "C0103, C0111,C0301, C0304, C0325, E0702, E1120, R0201, R0903, R0911, R0912, R0913, R1705, W0105, W0108, W0211, W0110, W0201, W0221, W0223, W0235, W1202, W0403, W0511, W0613, W0622, W0622, W0703"
 	let g:pymode_lint_signs = 1
 	let g:pymode_lint_todo_symbol = '😡'
 	let g:pymode_lint_error_symbol = '❌'
 	let g:pymode_lint_comment_symbol = '😢'
+	let g:pymode_lint_visual_symbol = '❗'
 
 	" 修改默认的红线为浅色，solorized黑色主题
 	highlight ColorColumn ctermbg=233
