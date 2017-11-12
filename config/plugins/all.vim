@@ -586,4 +586,11 @@ if dein#tap('Yggdroot/indentLine')
 	autocmd VimEnter,BufEnter,BufRead,BufWinEnter,WinEnter,BufNewFile,TabEnter * IndentLinesEnable
 endif
 
+
+if dein#tap('Chiel92/vim-autoformat')
+	" pip install --upgrade autopep8
+	let g:formatdef_autopep8 = '"autopep8 --max-line-length 120"'
+	let g:formatters_python = ['autopep8']
+endif
+
 " vim: set ts=2 sw=2 tw=80 noet :
