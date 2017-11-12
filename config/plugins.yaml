@@ -11,7 +11,7 @@
 - repo: junegunn/vim-peekaboo    # See the contents of registers
 - repo: tpope/vim-sleuth
 - repo: itchyny/vim-gitbranch
-- repo: tpope/tpope-vim-abolish
+- repo: tpope/tpope-vim-abolish    # change camel case
 - repo: Chiel92/vim-autoformat
 - repo: itchyny/vim-parenmatch
 - repo: itchyny/vim-cursorword
