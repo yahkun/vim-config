@@ -376,7 +376,7 @@ endif
 
 if dein#tap('python-mode')
 	let g:pymode_python = 'python'  " Values are `python`, `python3`, `disable`.
-	let g:pymode_paths = split(globpath(getcwd().'/eggs', '*'), '\n')     " support zc.buildout
+	let g:pymode_paths = reverse(split(globpath(getcwd().'/eggs', '*'), '\n'))    " support zc.buildout
 	let g:pymode_trim_whitespaces = 1
 	let g:pymode_quickfix_maxheight = 3
 	let g:pymode_indent = 1
@@ -428,6 +428,7 @@ if dein#tap('python-mode')
 	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
 	command PL PymodeLint
 	command PA PymodeLintAuto    " auto fix pep8
+	autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 endif
 
 if dein#tap('InstantRst')
