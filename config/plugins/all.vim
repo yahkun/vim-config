@@ -594,4 +594,9 @@ if dein#tap('Chiel92/vim-autoformat')
 	let g:formatters_python = ['autopep8']
 endif
 
+
+if dein#tap('editorconfig/editorconfig-vim')
+	let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+endif
+
 " vim: set ts=2 sw=2 tw=80 noet :
