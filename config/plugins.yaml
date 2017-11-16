@@ -40,6 +40,7 @@
 - repo: Yggdroot/indentLine
 - repo: sheerun/vim-polyglot
 - repo: tpope/vim-surround
+- repo: junegunn/vim-easy-align
 # - repo: editorconfig/editorconfig-vim
   hook_add: |
     autocmd MyAutoCmd FileType denite,qf,nerdtree let b:cursorword=0
