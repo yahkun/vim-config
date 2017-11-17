@@ -376,8 +376,9 @@ cnoremap w!! w !sudo tee % >/dev/null
 " 用 ,a 搜索当前 cursor 下单词
 noremap <leader>a :Ag! -w "<cword>"<cr>
 
-" add :FormatJSON command
+" add :FormatJSON command, https://coderwall.com/p/faceag/format-json-in-vim
 com! FormatJSON %!python -m json.tool
+com! FormatJSONUtf8 %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=4)"
 
 set pastetoggle=<F2>
 map <F4> :%retab! <CR> :w <CR>
