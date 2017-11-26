@@ -429,7 +429,7 @@ if dein#tap('python-mode')
 	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
 	command PL PymodeLint
 	" command PA PymodeLintAuto    " auto fix pep8
-	command PA Autoformat  " auto pep8
+	command PA Autoformat  " auto pep8   pip install autopep8
 	autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 endif
 

@@ -377,10 +377,10 @@ cnoremap w!! w !sudo tee % >/dev/null
 noremap <leader>a :Ag! -w "<cword>"<cr>
 
 " add :FormatJSON command, https://coderwall.com/p/faceag/format-json-in-vim
-com! FormatJSON %!python -m json.tool
-com! FormatJSONUtf8 %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=4)"
+com! FormatJSON %!python3 -c "import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=2))"
 com! FormatJSONPy3 %!python3 -m json.tool
-com! FormatJSONUtf8Py3 %!python3 -c "import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=4))"
+com! FormatJSONPy2 %!python -m json.tool
+com! FormatJSONPy2Utf8 %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=2)"
 
 set pastetoggle=<F2>
 map <F4> :%retab! <CR> :w <CR>
