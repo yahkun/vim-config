@@ -347,6 +347,7 @@ endfunction " }}}
 " Write buffer (save)
 noremap <Leader>w :w<CR>
 imap ,w <esc>:w<CR>
+imap ,q <esc>:wq<CR>
 
 " 切换 buffer
 nnoremap <silent> [b :bprevious<CR>
