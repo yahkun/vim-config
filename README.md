@@ -4,6 +4,8 @@ Lean mean Neo/vim machine, 30-45ms startup time.
 
 Best with Neovim or Vim 8 with +python3 extensions enabled.
 
+(一个强大的 neovim 配置)
+
 ## Features
 
 - Fast startup time
@@ -21,6 +23,7 @@ Best with Neovim or Vim 8 with +python3 extensions enabled.
 ## Screenshot
 
 ![Vim screenshot](http://rafi.io/static/img/project/vim-config/features.png)
+![Neovim python](http://7ktuty.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8B%E5%8D%885.24.28%20%282%29.png)
 
 ## Install
 
