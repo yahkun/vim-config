@@ -4,7 +4,7 @@ Lean mean Neo/vim machine, 30-45ms startup time.
 
 Best with Neovim or Vim 8 with +python3 extensions enabled.
 
-(一个强大的 neovim 配置)
+(一个强大的 neovim 配置，支持 js/python/php/golang 等)
 
 ## Features
 
@@ -532,7 +532,7 @@ Key   | Mode | Action
 `;`+`q` | Normal | Quick fix
 `;`+`n` | Normal | Dein plugin list
 `;`+`g` | Normal | Grep search
-`;`+`j` | Normal | Jump points
+`;`+`j` | Normal | Jump points(在搜索结果中上下移动，normal 模式下)
 `;`+`o` | Normal | Outline tags
 `;`+`s` | Normal | Sessions
 `;`+`t` | Normal | Tag under cursor

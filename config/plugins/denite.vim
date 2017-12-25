@@ -100,7 +100,7 @@ for m in normal_mode_mappings
 endfor
 
 call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
-	      \ [ '.git/', '.ropeproject/', '__pycache__/', 'eggs/', '.tmp',
+	      \ [ '.git/', '.ropeproject/', '__pycache__/', 'eggs/', '.tmp', '.cache',
 	      \   'venv/', 'images/', '*.min.*', 'img/', 'fonts/'])
 
 " vim: set ts=2 sw=2 tw=80 noet :
