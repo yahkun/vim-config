@@ -219,6 +219,19 @@ if dein#tap('vim-gitgutter')
 endif
 
 if dein#tap('vim-go')
+	" for golang https://github.com/fatih/vim-go https://github.com/fatih/vim-go-tutorial
+	let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+	"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+	set autowrite
+	autocmd FileType go nmap <leader>b  <Plug>(go-build)
+	autocmd FileType go nmap <leader>r  <Plug>(go-run)
+	" let g:go_list_type = "quickfix"
+	let g:go_auto_type_info = 1
+	autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+	let g:go_metalinter_autosave_enabled = ['golint']
+	let g:go_metalinter_autosave = 1
+
 	autocmd MyAutoCmd FileType go
 		\   nmap <C-]> <Plug>(go-def)
 		\ | nmap <Leader>god  <Plug>(go-describe)
