@@ -409,6 +409,7 @@ if dein#tap('python-mode')
 	let g:pymode_doc_bind = 'K'
 
 	autocmd CompleteDone * pclose
+	autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 	let g:pymode_rope = 1
 	let g:pymode_rope_autoimport = 0
 	let g:pymode_rope_complete_on_dot = 0
@@ -443,7 +444,6 @@ if dein#tap('python-mode')
 	command PL PymodeLint
 	" command PA PymodeLintAuto    " auto fix pep8
 	command PA Autoformat  " auto pep8   pip install autopep8
-	autocmd FileType python setlocal omnifunc=RopeCompleteFunc
 endif
 
 if dein#tap('InstantRst')
