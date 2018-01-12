@@ -448,7 +448,7 @@ endif
 
 if dein#tap('InstantRst')
 	" rst书写插件
-	let proj1 = { 'path': '~/Program/python-web-guide',}
+	let proj1 = { 'path': '~/Program/doc/python-web-guide',}
 	let g:riv_projects = [proj1]
 endif
 
