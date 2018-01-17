@@ -399,6 +399,8 @@ set noautochdir    " 注意这个自动切换目录会使rope找目录不正确�
 
 " 退出快捷键
 inoremap jj <Esc>`^
+inoremap hhh <Esc>`^
+inoremap kkk <Esc>`^o
 inoremap lll <Esc>`^
 inoremap ooo <Esc>`^o
 inoremap <C-k> <Esc>`^
