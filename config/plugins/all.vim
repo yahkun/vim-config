@@ -400,7 +400,6 @@ if dein#tap('python-mode')
 
 	let g:pymode_run = 1
 	let g:pymode_run_bind = "<C-e>"
-	"let g:pymode_run_bind = '<leader>r'
 	let g:pymode_virtualenv = 1
 	let g:pymode_virtualenv_path = $VIRTUAL_ENV
 
@@ -435,7 +434,6 @@ if dein#tap('python-mode')
 
 	" 修改默认的红线为浅色，solorized黑色主题
 	highlight ColorColumn ctermbg=233
-	let g:pymode_syntax_docstrings = 0
 	let g:pymode_lint_cwindow = 0
 	let g:pymode_options_max_line_length = 120
 	let g:pymode_options_colorcolumn = 1
