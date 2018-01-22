@@ -400,7 +400,6 @@ if dein#tap('python-mode')
 
 	let g:pymode_run = 1
 	let g:pymode_run_bind = "<C-e>"
-	"let g:pymode_run_bind = '<leader>r'
 	let g:pymode_virtualenv = 1
 	let g:pymode_virtualenv_path = $VIRTUAL_ENV
 
