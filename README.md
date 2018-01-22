@@ -707,7 +707,7 @@ Big thanks to the dark knight [Shougo].
 ## Tmux & Theme
 https://github.com/icymind/NeoSolarized
 
-You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:  
+You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:
 ```vim
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
@@ -717,7 +717,7 @@ The '^[' represent the escape char. You should press <kbd>Ctrl-v</kbd> + <kbd>Es
 check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more information.
 
 
-neovim works perfect without this config.  If you encounter a color issue using tmux, make sure that:  
+neovim works perfect without this config.  If you encounter a color issue using tmux, make sure that:
 - you are using the latest version of tmux (v2.2)
 - your $TERM variable is set to "xterm-256color"
 - add the line below to your .tmux.conf file:
@@ -727,3 +727,17 @@ neovim works perfect without this config.  If you encounter a color issue using 
     ```
 
 See this [article](https://deductivelabs.com/en/2016/03/using-true-color-vim-tmux/) for more details on tmux.
+
+## 解决 mac tmux 下 neovim 无法复制到剪贴板的问题
+
+```
+# https://github.com/tmux/tmux/issues/543
+brew install reattach-to-user-namespace
+# then edit your .tmux.conf
+set -g default-shell $SHELL
+set -g default-command "reattach-to-user-namespace -l ${SHELL}"
+# In .vimrc or ~/.config/nvim/init.vim (I use Neovim):
+set clipboard=unnamed
+# reload tmux config
+tmux source-file ~/.tmux.conf
+```
