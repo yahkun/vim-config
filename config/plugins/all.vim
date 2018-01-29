@@ -223,8 +223,8 @@ if dein#tap('vim-go')
 	let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 	"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 	set autowrite
-	autocmd FileType go nmap <leader>b  <Plug>(go-build)
-	autocmd FileType go nmap <leader>r  <Plug>(go-run)
+	autocmd FileType go nmap <C-b> <Plug>(go-build)
+	autocmd FileType go nmap <C-e> <Plug>(go-run)
 	" let g:go_list_type = "quickfix"
 	let g:go_auto_type_info = 1
 	autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4

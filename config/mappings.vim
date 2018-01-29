@@ -410,4 +410,7 @@ noremap <leader>b :bd<cr>
 noremap <leader>s :vs %<cr>  " vertical split
 noremap <leader>r :e!<cr>  " reload without save
 
+" omni Completion
+inoremap <C-Space> <C-x><C-o>
+
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
