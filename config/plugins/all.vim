@@ -323,18 +323,6 @@ if dein#tap('dsf.vim')
 	nmap csf <Plug>DsfChange
 endif
 
-if dein#tap('CamelCaseMotion')
-	nmap <silent> e <Plug>CamelCaseMotion_e
-	xmap <silent> e <Plug>CamelCaseMotion_e
-	omap <silent> e <Plug>CamelCaseMotion_e
-	nmap <silent> w <Plug>CamelCaseMotion_w
-	xmap <silent> w <Plug>CamelCaseMotion_w
-	omap <silent> w <Plug>CamelCaseMotion_w
-	nmap <silent> b <Plug>CamelCaseMotion_b
-	xmap <silent> b <Plug>CamelCaseMotion_b
-	omap <silent> b <Plug>CamelCaseMotion_b
-endif
-
 if dein#tap('vim-commentary')
 	xmap <Leader>c  <Plug>Commentary
 	nmap <Leader>c  <Plug>CommentaryLine
