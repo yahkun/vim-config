@@ -221,7 +221,7 @@ endif
 if dein#tap('vim-go')
 	" for golang https://github.com/fatih/vim-go https://github.com/fatih/vim-go-tutorial
 	let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-	"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+	let g:go_fmt_command = "goimports"
 	set autowrite
 	autocmd FileType go nmap <C-b> <Plug>(go-build)
 	autocmd FileType go nmap <C-e> <Plug>(go-run)
