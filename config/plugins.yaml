@@ -42,7 +42,6 @@
 - repo: tpope/vim-surround
 - repo: junegunn/vim-easy-align
 # - repo: editorconfig/editorconfig-vim
-- repo: SirVer/ultisnips
   hook_add: |
     autocmd MyAutoCmd FileType denite,qf,nerdtree let b:cursorword=0
     autocmd MyAutoCmd InsertEnter * let b:cursorword=0
@@ -125,8 +124,6 @@
   on_ft: go
   hook_source: |
     let g:go_def_mapping_enabled = 0
-    let g:go_loaded_gosnippets = 1
-    let g:go_snippet_engine = 'ultisnips'
     let g:go_highlight_extra_types = 1
     let g:go_highlight_operators = 1
 
@@ -438,11 +435,11 @@
     # let g:jedi#use_splits_not_buffers = 'right'
 
 # Only NeoVim ------------------------------
-- repo: zchee/deoplete-go
-  if: has('nvim') && ! empty($GOPATH) && empty($VIM_MINIMAL)
-  build: make
-  on_ft: go
-  on_i: 1
+# - repo: zchee/deoplete-go
+#   if: has('nvim') && ! empty($GOPATH) && empty($VIM_MINIMAL)
+#   build: make
+#   on_ft: go
+#   on_i: 1
 
 # - repo: zchee/deoplete-jedi
   # if: has('nvim') && empty($VIM_MINIMAL)
