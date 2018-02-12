@@ -590,4 +590,15 @@ if dein#tap('editorconfig/editorconfig-vim')
 	let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 endif
 
+
+if dein#tap('vim-multiple-cursors')
+	" https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt
+	function g:Multiple_cursors_before()
+		let g:deoplete#disable_auto_complete = 1
+	endfunction
+	function g:Multiple_cursors_after()
+		let g:deoplete#disable_auto_complete = 0
+	endfunction
+endif
+
 " vim: set ts=2 sw=2 tw=80 noet :
