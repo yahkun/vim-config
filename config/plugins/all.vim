@@ -443,6 +443,8 @@ endif
 if dein#tap('vim-instant-markdown')
 	let g:instant_markdown_autostart = 0
 	let g:vim_markdown_conceal = 0
+	" quote code use `
+	nnoremap <leader>" <esc>I`<esc>A`<esc>`
 endif
 
 if dein#tap('ctrlp.vim')
