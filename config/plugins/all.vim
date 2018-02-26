@@ -220,7 +220,6 @@ endif
 
 if dein#tap('vim-go')
 	" for golang https://github.com/fatih/vim-go https://github.com/fatih/vim-go-tutorial
-	let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 	let g:go_fmt_command = "goimports"
 	set autowrite
 	autocmd FileType go nmap <C-b> <Plug>(go-build)
@@ -412,7 +411,6 @@ if dein#tap('python-mode')
 	let g:pymode_lint_on_fly = 0
 	let g:pymode_lint_message = 1
 	let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pylint']
-	let g:syntastic_python_checkers = ['pylint']
 	let g:pymode_lint_ignore = ["C0103, C0111,C0301, C0304, C0325, E0702, E1120, R0201, R0903, R0911, R0912, R0913, R0914, R1705, W0105, W0108, W0211, W0110, W0201, W0221, W0223, W0235, W1202, W0403, W0511, W0622, W0622, W0703"]
 	let g:pymode_lint_options_mccabe = { 'complexity': 15 }
 	let g:pymode_lint_signs = 1
@@ -503,33 +501,6 @@ if dein#tap('rainbow_parentheses.vim')
 	au Syntax * RainbowParenthesesLoadSquare
 	au Syntax * RainbowParenthesesLoadBraces
 endif
-
-
-if dein#tap('syntastic')
-	"https://github.com/vim-syntastic/syntastic
-	let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['yaml'],'passive_filetypes': ['php']  }
-	nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-	command SY SyntasticCheck
-	let g:syntastic_enable_javascript_checker = 1
-	let g:syntastic_javascript_eslint_exec = '/Users/pegasus/.nvm/versions/node/v4.0.0/bin/eslint'
-	let g:syntastic_javascript_checkers = ['eslint']
-	let g:syntastic_always_populate_loc_list = 1
-	let g:syntastic_check_on_open = 0
-	let g:syntastic_check_on_wq = 1
-	let g:syntastic_always_populate_loc_list = 1
-	let g:syntastic_loc_list_height = 3
-
-	let g:syntastic_error_symbol = '❌'
-	let g:syntastic_style_error_symbol = '❗'
-	let g:syntastic_warning_symbol = '⚠️'
-	let g:syntastic_style_warning_symbol = '💩'
-
-	highlight link SyntasticErrorSign SignColumn
-	highlight link SyntasticWarningSign SignColumn
-	highlight link SyntasticStyleErrorSign SignColumn
-	highlight link SyntasticStyleWarningSign SignColumn
-endif
-
 
 if dein#tap('vim-interestingwords')
 	" https://github.com/lfv89/vim-interestingwords 高亮感兴趣的 word

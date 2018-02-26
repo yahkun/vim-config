@@ -107,6 +107,7 @@
     let g:javascript_plugin_flow = 1
     highlight! link jsFutureKeys PreProc
 
+
 - { repo: othree/jspc.vim, on_ft: [ javascript, jsx, javascript.jsx ] }
 - { repo: MaxMEllon/vim-jsx-pretty, on_ft: [ javascript, jsx, javascript.jsx ]}
 - { repo: heavenshell/vim-jsdoc, on_ft: [ javascript, jsx, javascript.jsx ] }
@@ -114,11 +115,19 @@
 - { repo: elzr/vim-json, on_ft: json }
 
 # pangloss/javascript vs. othree/yajs
-#- { repo: othree/yajs.vim, on_ft: [ javascript, jsx, javascript.jsx ]}
-#- { repo: gavocanov/vim-js-indent, on_ft: [ javascript, jsx, javascript.jsx ]}
-#- repo: mxw/vim-jsx
-#  on_ft: [ javascript, jsx, javascript.jsx ]
-#  hook_source: let g:jsx_ext_required = 0
+# - { repo: gavocanov/vim-js-indent, on_ft: [ javascript, jsx, javascript.jsx ]}
+# - repo: mxw/vim-jsx
+#   on_ft: [ javascript, jsx, javascript.jsx ]
+#   hook_source: let g:jsx_ext_required = 0
+
+- repo: prettier/vim-prettier # https://github.com/prettier/vim-prettier
+  build: npm install -g prettier
+  if: executable('npm') && has('nvim') && empty($VIM_MINIMAL)
+  on_ft: [ javascript, jsx, javascript.jsx ]
+  hook_source: |
+    let g:prettier#config#print_width = 120
+    let g:prettier#exec_cmd_async = 1
+    let g:prettier#config#trailing_comma = 'none'  # none|es5|all
 
 - repo: fatih/vim-go
   on_ft: go
