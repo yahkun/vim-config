@@ -430,6 +430,7 @@ if dein#tap('python-mode')
 	command PL PymodeLint
 	" command PA PymodeLintAuto    " auto fix pep8
 	command PA Autoformat  " auto pep8   pip install autopep8
+	noremap <leader>p :Autoformat<cr>
 endif
 
 if dein#tap('InstantRst')
