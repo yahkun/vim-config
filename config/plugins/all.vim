@@ -546,8 +546,9 @@ endif
 
 
 if dein#tap('Yggdroot/indentLine')
-	autocmd FileType * IndentLinesEnable
-	autocmd VimEnter,BufEnter,BufRead,BufWinEnter,WinEnter,BufNewFile,TabEnter * IndentLinesEnable
+	let g:indentLine_enabled = 1
+	" autocmd FileType * IndentLinesEnable
+	" autocmd VimEnter,BufEnter,BufRead,BufWinEnter,WinEnter,BufNewFile,TabEnter * IndentLinesEnable
 endif
 
 
