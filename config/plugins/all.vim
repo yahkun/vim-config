@@ -415,8 +415,10 @@ if dein#tap('python-mode')
 	let g:pymode_lint_options_mccabe = { 'complexity': 15 }
 	let g:pymode_lint_signs = 1
 	let g:pymode_lint_todo_symbol = '😡'
-	let g:pymode_lint_error_symbol = '❌'
-	let g:pymode_lint_comment_symbol = '😢'
+	" let g:pymode_lint_error_symbol = '❌'
+	" let g:pymode_lint_comment_symbol = '😢'
+	let g:pymode_lint_error_symbol = '✗'
+	let g:pymode_lint_comment_symbol = '⚡'
 	let g:pymode_lint_visual_symbol = '❗'
 
 	" 修改默认的红线为浅色，solorized黑色主题
