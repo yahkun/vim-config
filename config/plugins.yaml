@@ -120,14 +120,14 @@
 #   on_ft: [ javascript, jsx, javascript.jsx ]
 #   hook_source: let g:jsx_ext_required = 0
 
-- repo: prettier/vim-prettier # https://github.com/prettier/vim-prettier
-  build: npm install -g prettier
-  if: executable('npm') && has('nvim') && empty($VIM_MINIMAL)
-  on_ft: [ javascript, jsx, javascript.jsx ]
-  hook_source: |
-    let g:prettier#config#print_width = 120
-    let g:prettier#exec_cmd_async = 1
-    let g:prettier#config#trailing_comma = 'none'  # none|es5|all
+# - repo: prettier/vim-prettier # https://github.com/prettier/vim-prettier
+#   build: npm install -g prettier
+#   if: executable('npm') && has('nvim') && empty($VIM_MINIMAL)
+#   on_ft: [ javascript, jsx, javascript.jsx ]
+#   hook_source: |
+#     let g:prettier#config#print_width = 120
+#     let g:prettier#exec_cmd_async = 1
+#     let g:prettier#config#trailing_comma = 'none'  # none|es5|all
 
 - repo: fatih/vim-go
   on_ft: go
@@ -456,32 +456,32 @@
   # on_i: 1
   # hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
 
-- repo: carlitux/deoplete-ternjs
-  build: npm install -g tern
-  if: executable('npm') && has('nvim') && empty($VIM_MINIMAL)
-  on_i: 1
-  on_ft: [ javascript, jsx, javascript.jsx ]
-  hook_source: |
-    let g:tern_request_timeout = 1
-    let g:tern_show_signature_in_pum = 0
+# - repo: carlitux/deoplete-ternjs
+#   build: npm install -g tern
+#   if: executable('npm') && has('nvim') && empty($VIM_MINIMAL)
+#   on_i: 1
+#   on_ft: [ javascript, jsx, javascript.jsx ]
+#   hook_source: |
+#     let g:tern_request_timeout = 1
+#     let g:tern_show_signature_in_pum = 0
 
 - repo: wellle/tmux-complete.vim
   if: has('nvim') && empty($VIM_MINIMAL)
   on_i: 1
   hook_add: let g:tmuxcomplete#trigger = ''
 
-- repo: ternjs/tern_for_vim
-  build: npm install
-  if: executable('npm') && empty($VIM_MINIMAL)
-  on_i: 1
-  on_ft: [ javascript, jsx, javascript.jsx ]
-  hook_add: |
-    let g:tern#command = ['tern']
-    let g:tern#arguments = ['--persistent']
-    let g:tern_request_timeout = 1
-    let g:tern_show_signature_in_pum = 0
-  hook_post_source: |
-    autocmd MyAutoCmd FileType javascript setlocal omnifunc=tern#Complete
+# - repo: ternjs/tern_for_vim
+#   build: npm install
+#   if: executable('npm') && empty($VIM_MINIMAL)
+#   on_i: 1
+#   on_ft: [ javascript, jsx, javascript.jsx ]
+#   hook_add: |
+#     let g:tern#command = ['tern']
+#     let g:tern#arguments = ['--persistent']
+#     let g:tern_request_timeout = 1
+#     let g:tern_show_signature_in_pum = 0
+#   hook_post_source: |
+#     autocmd MyAutoCmd FileType javascript setlocal omnifunc=tern#Complete
 
 # ==========================================
 # Denite
