@@ -9,7 +9,11 @@
 let g:mapleader=","
 let g:maplocalleader=';'
 let g:python3_host_skip_check=1
-let g:python3_host_prog='/usr/local/bin/python3'
+if filereadable('/usr/local/bin/python3')
+  let g:python3_host_prog='/usr/local/bin/python3'
+else
+  let g:python3_host_prog='/usr/bin/python3'
+endif
 
 " Release keymappings prefixes, evict entirely for use of plug-ins.
 nnoremap <Space>  <Nop>
