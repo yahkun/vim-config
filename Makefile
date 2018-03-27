@@ -9,6 +9,11 @@ install:
 	$(vim) --cmd 'set t_ti= t_te= nomore' -N -U NONE -i NONE \
 		-c "try | call dein#update() | finally | call confirm('') | qall! | endtry"
 
+silent_install:
+	@mkdir -vp "$(XDG_CACHE_HOME)/vim/"{backup,session,swap,tags,undo}; \
+	$(vim) --cmd 'set t_ti= t_te= nomore' -N -U NONE -i NONE \
+		-c "try | call dein#update() | finally | qall! | endtry"
+
 update:
 	@git pull --ff --ff-only; \
 	$(vim) --cmd 'set t_ti= t_te= nomore' -N -U NONE -i NONE \
@@ -44,4 +49,4 @@ endif
 	@echo All tests passed, hooray!
 
 
-.PHONY: install update upgrade uninstall test
+.PHONY: install silent_install update upgrade uninstall test
