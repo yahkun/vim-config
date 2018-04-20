@@ -212,7 +212,7 @@ Name           | Description
 [metakirby5/codi.vim] | The interactive scratchpad for hackers
 [Shougo/vimproc.vim] | Interactive command execution
 [reedes/vim-wordy] | Uncover usage problems in your writing
-[brooth/far.vim] | Fast find and replace plugin
+[brooth/far.vim] | Fast find and replace plugin（批量在多个文件中替换字符、支持预览）
 [jreybert/vimagit] | Ease your git work-flow within Vim
 [tweekmonster/helpful.vim] | Display vim version numbers in docs
 [lambdalisue/gina.vim] | Asynchronously control git repositories
