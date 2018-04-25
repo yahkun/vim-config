@@ -417,8 +417,9 @@ if dein#tap('python-mode')
 	let g:pymode_lint_todo_symbol = '😡' 
 	" let g:pymode_lint_error_symbol = '❌'
 	" let g:pymode_lint_comment_symbol = '😢'
+	" let g:pymode_lint_comment_symbol = "❗"
 	let g:pymode_lint_error_symbol = "\U2717"
-	let g:pymode_lint_comment_symbol = "❗"
+	let g:pymode_lint_comment_symbol = "\u2757"
 	let g:pymode_lint_visual_symbol = "\u0021"
 
 	" 修改默认的红线为浅色，solorized黑色主题
