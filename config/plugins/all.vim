@@ -442,13 +442,6 @@ if dein#tap('InstantRst')
 	let g:riv_projects = [proj1]
 endif
 
-if dein#tap('vim-instant-markdown')
-	let g:instant_markdown_autostart = 0
-	let g:vim_markdown_conceal = 0
-	" quote code use `
-	nnoremap <leader>" <esc>I`<esc>A`<esc>`
-endif
-
 if dein#tap('ctrlp.vim')
 	" ctrlp, 在~/.agignore添加一行node_modules
 	set wildignore+=*/tmp/*,*.so,*.swp,*.zip

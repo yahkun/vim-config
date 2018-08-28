@@ -61,7 +61,8 @@
 - { repo: mitsuhiko/vim-jinja, on_ft: [ htmljinja, jinja ]}
 - { repo: mustache/vim-mustache-handlebars, on_ft: html }
 - { repo: Rykka/InstantRst, on_ft: rst}
-- { repo: suan/vim-instant-markdown, on_ft: markdown}
+- { repo: iamcco/mathjax-support-for-mkdp, on_ft: markdown}
+- { repo: iamcco/markdown-preview.vim, on_ft: markdown}
 
 - repo: pearofducks/ansible-vim
   on_ft: [ ansible, ansible_hosts, ansible_template ]
