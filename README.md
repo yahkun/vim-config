@@ -746,3 +746,12 @@ set clipboard=unnamed
 # reload tmux config
 tmux source-file ~/.tmux.conf
 ```
+
+## 解决 vim gutter 使用 emoji 文本渲染问题
+
+See this [Vim text rendering off by one issue](https://www.reddit.com/r/vim/comments/6vkoii/vim_text_rendering_off_by_one_issue/)
+
+如果你使用了 Iterm2 + neovim，并且在 gutter 栏使用了 emoji 表情，比如 vim-gitgutter, vim-ale 等插件的提示是 emoji。
+请勾选 Iterm2->Profiles->Text->Use Unicode versoin 9 widths
+
+See this issue https://stackoverflow.com/questions/43107435/emoji-display-issue-in-vim-with-tmux/52142277#52142277
