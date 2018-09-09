@@ -360,12 +360,12 @@ imap ,w <esc>:w<CR>
 imap ,q <esc>:wq<CR>
 
 " 切换 buffer
-" nnoremap <silent> [b :bprevious<CR>
-" nnoremap <silent> [n :bnext<CR>
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> [n :bnext<CR>
 
 " Jump back to last edited buffer, default ctrl+^
-nnoremap <C-[> <C-^>
-inoremap <C-[> <esc><C-^>
+" nnoremap <C-[> <C-^>
+" inoremap <C-[> <esc><C-^>
 
 " shortcuts to vimdiff, http://stackoverflow.com/questions/7309707/why-does-git-mergetool-opens-4-windows-in-vimdiff-id-expect-3
 let mapleader=','
