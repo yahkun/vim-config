@@ -360,8 +360,8 @@ imap ,w <esc>:w<CR>
 imap ,q <esc>:wq<CR>
 
 " 切换 buffer
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> [n :bnext<CR>
+" nnoremap <silent> [b :bprevious<CR>
+" nnoremap <silent> [n :bnext<CR>
 
 " Jump back to last edited buffer, default ctrl+^
 nnoremap <C-[> <C-^>
