@@ -420,7 +420,7 @@ Name           | Description
 
 Note that,
 
-* Leader key is set as <kbd>Space</kbd>
+* Leader key is set as <kbd>Space</kbd> （这里改成了 ,）
 * Local-leader is set as <kbd>;</kbd> and used for Denite & NERDTree
 
 Key   | Mode | Action
