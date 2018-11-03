@@ -79,9 +79,10 @@ if dein#tap('nerdtree')
 
 	nmap ,v :NERDTreeFind<cr>
 	nmap ,g :NERDTreeToggle<cr>
-
-	nnoremap <silent> <LocalLeader>e :<C-u>NERDTreeToggle<CR>
-	nnoremap <silent> <LocalLeader>a :<C-u>NERDTreeFind<CR>
+	nnoremap <silent> <LocalLeader>e :<C-u>let NERDTreeWinPos=0 \| NERDTreeToggle<CR>
+	nnoremap <silent> <LocalLeader>a :<C-u>let NERDTreeWinPos=0 \| NERDTreeFind<CR>
+	nnoremap <silent> <LocalLeader>E :<C-u>let NERDTreeWinPos=1 \| NERDTreeToggle<CR>
+	nnoremap <silent> <LocalLeader>A :<C-u>let NERDTreeWinPos=1 \| NERDTreeFind<CR>
 endif
 
 if dein#tap('neosnippet.vim')
@@ -415,7 +416,7 @@ if dein#tap('python-mode')
 	let g:pymode_lint_ignore = ["C0103, C0111, C0301, C0304, C0325, E0702, E1120, R0201, R0903, R0911, R0912, R0913, R1705, W0105, W0108, W0110, W0201, W0221, W0223, W0235, W0403, W0511, W0622, W0703, W1202"]
 	let g:pymode_lint_options_mccabe = { 'complexity': 15 }
 	let g:pymode_lint_signs = 1
-	let g:pymode_lint_todo_symbol = '😡' 
+	let g:pymode_lint_todo_symbol = '😡'
 	" let g:pymode_lint_error_symbol = '❌'
 	" let g:pymode_lint_comment_symbol = '😢'
 	" let g:pymode_lint_comment_symbol = "❗"

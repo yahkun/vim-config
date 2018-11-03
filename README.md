@@ -25,6 +25,17 @@ Best with Neovim or Vim 8 with +python3 extensions enabled.
 ![Vim screenshot](http://rafi.io/static/img/project/vim-config/features.png)
 ![Neovim python](http://7ktuty.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-12-22%20%E4%B8%8B%E5%8D%885.24.28%20%282%29.png)
 
+## Pre-requisites
+
+* Python 3 (`brew install python`)
+* Python 2 (`brew install python@2`)
+* Neovim (Optional, `brew install neovim`)
+* virtualenv for both python3 and python2:
+  ```
+  pip2 install virtualenv
+  pip3 install virtualenv
+  ```
+
 ## Install
 
 **_1._** Let's clone this repo! Clone to `~/.config/nvim`,

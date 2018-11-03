@@ -1,3 +1,4 @@
+SHELL = /bin/bash
 vim := $(if $(shell which nvim),nvim,$(shell which vim))
 vim_version := '${shell $(vim) --version}'
 XDG_CACHE_HOME ?= $(HOME)/.cache
@@ -8,6 +9,7 @@ install:
 	@mkdir -vp "$(XDG_CACHE_HOME)/vim/"{backup,session,swap,tags,undo}; \
 	$(vim) --cmd 'set t_ti= t_te= nomore' -N -U NONE -i NONE \
 		-c "try | call dein#update() | finally | call confirm('') | qall! | endtry"
+	./venv.sh
 
 silent_install:
 	@mkdir -vp "$(XDG_CACHE_HOME)/vim/"{backup,session,swap,tags,undo}; \
@@ -18,6 +20,7 @@ update:
 	@git pull --ff --ff-only; \
 	$(vim) --cmd 'set t_ti= t_te= nomore' -N -U NONE -i NONE \
 		-c "try | call dein#clear_state() | call dein#update() | call dein#recache_runtimepath() | finally | call confirm('') | qall! | endtry"
+	./venv.sh
 
 upgrade: update
 
