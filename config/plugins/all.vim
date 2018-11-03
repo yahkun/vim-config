@@ -416,6 +416,7 @@ if dein#tap('python-mode')
 	let g:pymode_lint_ignore = ["C0103, C0111, C0301, C0304, C0325, E0702, E1120, R0201, R0903, R0911, R0912, R0913, R1705, W0105, W0108, W0110, W0201, W0221, W0223, W0235, W0403, W0511, W0622, W0703, W1202"]
 	let g:pymode_lint_options_mccabe = { 'complexity': 15 }
 	let g:pymode_lint_signs = 1
+	" if you want use emoji you shoud set : Iterm2->Profiles->Text->Use Unicode versoin 9 widths
 	let g:pymode_lint_todo_symbol = '😡'
 	" let g:pymode_lint_error_symbol = '❌'
 	" let g:pymode_lint_comment_symbol = '😢'
