@@ -62,6 +62,7 @@
 - { repo: mustache/vim-mustache-handlebars, on_ft: html }
 # pip install https://github.com/Rykka/instant-rst.py/archive/master.zip
 - { repo: Rykka/InstantRst, on_ft: rst}
+- { repo: PegasusWang/RST-Tables, on_ft: rst}
 - { repo: iamcco/mathjax-support-for-mkdp, on_ft: markdown}
 - { repo: iamcco/markdown-preview.vim, on_ft: markdown}
 
