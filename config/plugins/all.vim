@@ -633,4 +633,10 @@ if dein#tap('MatchTagAlways')
     \}
 endif
 
+
+if dein#tap('vim-xkbswitch')
+	" https://github.com/lyokha/vim-xkbswitch
+	let g:XkbSwitchEnabled = 1
+endif
+
 " vim: set ts=2 sw=2 tw=80 noet :

@@ -825,3 +825,10 @@ eggs/
 *.swp
 *.pyc
 ```
+## 解决中文输入问题。
+解决中文输入法在 vim 下的使用问题，仅针对 mac 测试过，理论上三个平台都可以使用。
+如果是插入模式下输入中文，当离开插入模式进入 normal 模式的时候，会自动切换成英文输入法，无需每次手动切换非常麻烦。
+
+1. git clone https://github.com/myshov/libxkbswitch-macosx
+2. cp libxkbswitch-macosx/bin/libxkbswitch.dylib  /usr/local/lib/
+3. install plugin: https://github.com/lyokha/vim-xkbswitch
