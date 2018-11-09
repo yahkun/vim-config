@@ -453,11 +453,11 @@
   on_ft: go
   on_event: InsertEnter
 
-- repo: zchee/deoplete-jedi
-  if: has('nvim') && empty($VIM_MINIMAL)
-  on_ft: python
-  on_event: InsertEnter
-  hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
+# - repo: zchee/deoplete-jedi
+#   if: has('nvim') && empty($VIM_MINIMAL)
+#   on_ft: python
+#   on_event: InsertEnter
+#   hook_source: autocmd MyAutoCmd FileType python setlocal omnifunc=
 
 - repo: carlitux/deoplete-ternjs
   build: npm install -g tern
