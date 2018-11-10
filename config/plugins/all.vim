@@ -571,4 +571,10 @@ if dein#tap('vim-multiple-cursors')
 	endfunction
 endif
 
+
+if dein#tap('vim-polyglot')
+	let g:polyglot_disabled = ['javascript', 'jsx']
+endif
+
+
 " vim: set ts=2 sw=2 tw=80 noet :
