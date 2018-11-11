@@ -12,7 +12,7 @@
 - repo: tpope/vim-sleuth
 - repo: itchyny/vim-gitbranch
 - repo: tpope/tpope-vim-abolish    # change camel case
-- repo: Chiel92/vim-autoformat
+- repo: sbdchd/neoformat
 - repo: itchyny/vim-parenmatch
 - repo: itchyny/vim-cursorword
 - repo: ianva/vim-youdao-translater
@@ -41,6 +41,7 @@
 - repo: sheerun/vim-polyglot   # note: confict with javascript, jsx
 - repo: tpope/vim-surround
 - repo: junegunn/vim-easy-align
+- repo: Valloric/MatchTagAlways
 # - repo: editorconfig/editorconfig-vim
   hook_add: |
     autocmd MyAutoCmd FileType denite,qf,nerdtree let b:cursorword=0
@@ -75,9 +76,6 @@
     let g:html5_microdata_attributes_complete = 0
     let g:html5_aria_attributes_complete = 0
 
-- repo: gregsexton/MatchTag
-  on_ft: [ html, htmldjango ]
-
 - repo: plasticboy/vim-markdown
   on_ft: markdown
   hook_add: |
@@ -109,7 +107,7 @@
     highlight! link jsFutureKeys PreProc
 
 - { repo: othree/jspc.vim, on_ft: [ javascript, jsx, javascript.jsx ] }
-- { repo: MaxMEllon/vim-jsx-pretty, on_ft: [ javascript, jsx, javascript.jsx ]}
+#- { repo: MaxMEllon/vim-jsx-pretty, on_ft: [ javascript, jsx, javascript.jsx ]}
 - { repo: heavenshell/vim-jsdoc, on_ft: [ javascript, jsx, javascript.jsx ] }
 - { repo: moll/vim-node, on_ft: [ javascript, jsx, javascript.jsx ] }
 - { repo: elzr/vim-json, on_ft: json }
@@ -117,9 +115,9 @@
 # pangloss/javascript vs. othree/yajs
 #- { repo: othree/yajs.vim, on_ft: [ javascript, jsx, javascript.jsx ]}
 #- { repo: gavocanov/vim-js-indent, on_ft: [ javascript, jsx, javascript.jsx ]}
-#- repo: mxw/vim-jsx
-#  on_ft: [ javascript, jsx, javascript.jsx ]
-#  hook_source: let g:jsx_ext_required = 0
+- repo: mxw/vim-jsx
+  on_ft: [ javascript, jsx, javascript.jsx ]
+  hook_source: let g:jsx_ext_required = 0
 
 # - repo: prettier/vim-prettier # https://github.com/prettier/vim-prettier
 #   build: npm install -g prettier

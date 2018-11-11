@@ -542,21 +542,40 @@ if dein#tap('vim-airline')
 endif
 
 
-if dein#tap('Yggdroot/indentLine')
+if dein#tap('indentLine')
 	let g:indentLine_enabled = 1
 	" autocmd FileType * IndentLinesEnable
 	" autocmd VimEnter,BufEnter,BufRead,BufWinEnter,WinEnter,BufNewFile,TabEnter * IndentLinesEnable
 endif
 
 
-if dein#tap('Chiel92/vim-autoformat')
+" if dein#tap('vim-autoformat')
 	" pip install --upgrade autopep8
-	let g:formatdef_autopep8 = '"autopep8 --max-line-length 120"'
-	let g:formatters_python = ['autopep8']
+	" let g:formatdef_autopep8 = '"autopep8 --max-line-length 120"'
+	" let g:formatters_python = ['autopep8']
+" endif
+if dein#tap('neoformat')
+	let g:neoformat_try_formatprg = 1
+  " pip install --upgrade autopep8
+	let g:neoformat_python_autopep8 = {
+            \ 'exe': 'autopep8',
+            \ 'args': ['--max-line-length 140', '-'],
+            \ 'stdin': 1,
+            \ }
+	let g:neoformat_enabled_python = ['autopep8']
+
+	" yarn global add prettier@1.12.1  or  npm install --save-dev prettier@1.12.1
+	" note must use prettier specific version
+	" https://github.com/prettier/prettier/blob/master/docs/vim.md
+	autocmd FileType javascript,javascript.jsx setlocal formatprg=prettier\
+                                                            \--stdin\
+                                                            \--print-width\ 120\
+                                                            \--single-quote\
+                                                            \--trailing-comma\ es5
 endif
 
 
-if dein#tap('editorconfig/editorconfig-vim')
+if dein#tap('editorconfig-vim')
 	let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 endif
 
@@ -573,8 +592,15 @@ endif
 
 
 if dein#tap('vim-polyglot')
-	let g:polyglot_disabled = ['javascript', 'jsx']
+	let g:polyglot_disabled = ['javascript', 'jsx', 'javascript.jsx']
 endif
 
+
+if dein#tap('MatchTagAlways')
+	" https://speakerdeck.com/jwworth/react-dot-js-plus-vim?slide=35
+	let g:mta_filetypes = {
+    \ 'javascript.jsx' : 1,
+    \}
+endif
 
 " vim: set ts=2 sw=2 tw=80 noet :
