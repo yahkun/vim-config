@@ -432,8 +432,8 @@ if dein#tap('python-mode')
 	let g:ultisnips_python_style = 'sphinx'
 	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
 	command PL PymodeLint
-	" command PA PymodeLintAuto    " auto fix pep8
-	noremap <leader>p :Neoformat<cr>
+	command PA PymodeLintAuto    " auto fix pep8
+	noremap <leader>p :Neoformat<cr>  " normal mode use leader(,)+p autopep8 format code
 endif
 
 if dein#tap('InstantRst')
