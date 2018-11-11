@@ -433,8 +433,7 @@ if dein#tap('python-mode')
 	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
 	command PL PymodeLint
 	" command PA PymodeLintAuto    " auto fix pep8
-	command PA Autoformat  " auto pep8   pip install autopep8
-	noremap <leader>p :Autoformat<cr>
+	noremap <leader>p :Neoformat<cr>
 endif
 
 if dein#tap('InstantRst')
@@ -549,11 +548,6 @@ if dein#tap('indentLine')
 endif
 
 
-" if dein#tap('vim-autoformat')
-	" pip install --upgrade autopep8
-	" let g:formatdef_autopep8 = '"autopep8 --max-line-length 120"'
-	" let g:formatters_python = ['autopep8']
-" endif
 if dein#tap('neoformat')
 	let g:neoformat_try_formatprg = 1
   " pip install --upgrade autopep8
