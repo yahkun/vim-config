@@ -566,6 +566,7 @@ if dein#tap('neoformat')
                                                             \--print-width\ 120\
                                                             \--single-quote\
                                                             \--trailing-comma\ es5
+	let g:neoformat_enabled_javascript = ['prettier']
 endif
 
 
