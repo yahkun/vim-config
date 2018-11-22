@@ -764,3 +764,21 @@ See this [Vim text rendering off by one issue](https://www.reddit.com/r/vim/comm
 请勾选 Iterm2->Profiles->Text->Use Unicode versoin 9 widths
 
 See this issue https://stackoverflow.com/questions/43107435/emoji-display-issue-in-vim-with-tmux/52142277#52142277
+
+## ag (The Silver Searcher) ignore file 搜索忽略文件
+
+add `~/.agignore` file:
+
+```
+node_modules
+.git
+.ropeproject
+
+gen-py/
+gen-go/
+eggs/
+.tmp/
+
+*.swp
+*.pyc
+```
