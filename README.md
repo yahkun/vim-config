@@ -768,6 +768,8 @@ See this issue https://stackoverflow.com/questions/43107435/emoji-display-issue-
 
 ## ag (The Silver Searcher) ignore file 搜索忽略文件
 
+最好在你的根目录或者项目目录加上 ag 搜索需要忽略的文件，防止 denite 搜索占用太大内存，并且加速筛选内容
+
 add `~/.agignore` file:
 
 ```
