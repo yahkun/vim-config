@@ -4,7 +4,7 @@ Lean mean Neo/vim machine, 30-45ms startup time.
 
 Best with Neovim or Vim 8 with +python3 extensions enabled.
 
-(一个强大的 neovim 配置，支持 js/python/php/golang 等)
+(一个强大的 neovim 配置，支持 js/python(default python3)/php/golang 等)
 
 ## Features
 
@@ -96,7 +96,7 @@ pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint
 
 - ag (The Silver Searcher): [ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - z (jump around): [rupa/z](https://github.com/rupa/z)
-- Universal ctags: [ctags.io](https://ctags.io/)
+- Universal ctags: [ctags.io](https://ctags.io/) mac: brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 - Fuzzy file finders: [fzf](https://github.com/junegunn/fzf), [fzy](https://github.com/jhawthorn/fzy), or [peco](https://github.com/peco/peco)
 - Tern: `npm -g install tern`
 

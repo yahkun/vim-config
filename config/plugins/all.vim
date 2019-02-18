@@ -376,7 +376,7 @@ if dein#tap('vim-pydocstring')
 endif
 
 if dein#tap('python-mode')
-	let g:pymode_python = 'python'  " Values are `python`, `python3`, `disable`.
+	let g:pymode_python = 'python3'  " Values are `python`, `python3`, `disable`.
 	let g:pymode_paths = reverse(split(globpath(getcwd().'/eggs', '*'), '\n'))    " support zc.buildout
 	let g:pymode_trim_whitespaces = 1
 	let g:pymode_quickfix_maxheight = 3
