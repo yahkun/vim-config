@@ -8,12 +8,6 @@
 " let g:mapleader="\<Space>"
 let g:mapleader=","
 let g:maplocalleader=';'
-let g:python3_host_skip_check=1
-if filereadable('/usr/local/bin/python3')
-  let g:python3_host_prog='/usr/local/bin/python3'
-else
-  let g:python3_host_prog='/usr/bin/python3'
-endif
 
 " Release keymappings prefixes, evict entirely for use of plug-ins.
 nnoremap <Space>  <Nop>
@@ -71,10 +65,10 @@ let g:loaded_gzip = 1
 let g:loaded_logiPat = 1
 let g:loaded_matchit = 1
 let g:loaded_matchparen = 1
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
 let g:loaded_rrhelper = 1
 let g:loaded_ruby_provider = 1
 let g:loaded_shada_plugin = 1
-let g:loaded_spellfile_plugin = 1
 let g:loaded_tar = 1
 let g:loaded_tarPlugin = 1
 let g:loaded_tutor_mode_plugin = 1
