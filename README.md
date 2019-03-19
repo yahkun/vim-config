@@ -666,7 +666,7 @@ Key   | Mode | Action
 
 Key   | Mode | Action
 ----- |:----:| ------------------
-`<leader>`+`,(change: leader + h)` | Normal/Visual | Toggle highlighted word
+`<leader>`+, | Normal/Visual | Toggle highlighted word
 
 ### Plugin: Expand-Region
 
