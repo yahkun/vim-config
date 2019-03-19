@@ -470,7 +470,7 @@ Name           | Description
 
 Note that,
 
-* Leader key is set as <kbd>Space</kbd>
+* Leader key is set as <kbd>Space</kbd>  (Note I use , as laeder. 注意我用的是逗号作为 leader 不是空格)
 * Local-leader is set as <kbd>;</kbd> and used for Denite & NERDTree
 
 Key   | Mode | Action
@@ -666,7 +666,7 @@ Key   | Mode | Action
 
 Key   | Mode | Action
 ----- |:----:| ------------------
-`<leader>`+`,` | Normal/Visual | Toggle highlighted word
+`<leader>`+`,(change: leader + h)` | Normal/Visual | Toggle highlighted word
 
 ### Plugin: Expand-Region
 
