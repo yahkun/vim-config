@@ -211,7 +211,8 @@
   trusted: 1
   hook_post_source: source $VIMPATH/config/plugins/nerdtree.vim
 
-- { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
+# WARNING: conflict with python-mode, see https://github.com/python-mode/python-mode/issues/1006
+# - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
 - { repo: t9md/vim-choosewin, on_map: { n: <Plug> }}
 - { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
 - { repo: guns/xterm-color-table.vim, on_cmd: XtermColorTable }
@@ -331,7 +332,7 @@
   hook_source: source $VIMPATH/config/plugins/neomake.vim
   hook_add: |
     let g:lint_types = [
-      \  'yaml.ansible', 'python', 'php', 'ruby', 'vim', 'go', 'sh',
+      \  'yaml.ansible', 'php', 'ruby', 'vim', 'sh',
       \  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
       \  'markdown', 'html', 'yaml'
       \ ]

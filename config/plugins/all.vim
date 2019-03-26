@@ -400,7 +400,7 @@ if dein#tap('vim-textobj-function')
 endif
 
 if dein#tap('incsearch.vim')
-	" 模糊搜索，使用z/支持模糊搜索
+	" fuzzy search with z/  (ch:模糊搜索，使用z/支持模糊搜索)
 	map z/ <Plug>(incsearch-fuzzy-/)
 	map z? <Plug>(incsearch-fuzzy-?)
 	map zg/ <Plug>(incsearch-fuzzy-stay)
@@ -411,6 +411,8 @@ if dein#tap('vim-pydocstring')
 endif
 
 if dein#tap('python-mode')
+	" when PYTHON_VERSION env variable is set, use python2. default Use python3
+	" ch: 如果设置了 PYTHON_VERSION=2 环境变量使用 python2 ，否则默认 python3
 	if $PYTHON_VERSION == '2'
 		let g:pymode_python = 'python'  " Values are `python`, `python3`, `disable`.
 	else
@@ -436,6 +438,7 @@ if dein#tap('python-mode')
 
 	autocmd CompleteDone * pclose
 	autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+	" WARNING: rope complete conflict with jedi, choose one of them
 	let g:pymode_rope = 1
 	let g:pymode_rope_autoimport = 0
 	let g:pymode_rope_complete_on_dot = 0
