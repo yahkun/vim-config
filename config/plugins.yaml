@@ -339,7 +339,7 @@
   hook_source: source $VIMPATH/config/plugins/neomake.vim
   hook_add: |
     let g:lint_types = [
-      \  'yaml.ansible', 'php', 'ruby', 'vim', 'sh',
+      \  'yaml.ansible', 'php', 'ruby', 'vim', 'sh', 'python',
       \  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
       \  'markdown', 'html', 'yaml'
       \ ]

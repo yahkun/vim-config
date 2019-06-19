@@ -236,7 +236,7 @@ if dein#tap('vim-go')
 	let g:go_fmt_command = "goimports"
 	set autowrite
 	autocmd FileType go nmap <C-b> <Plug>(go-build)
-	autocmd FileType go nmap <C-e> <Plug>(go-run)
+	" autocmd FileType go nmap <C-e> <Plug>(go-run)
 	autocmd FileType go nmap <C-i> <Plug>(go-imports)
 	" let g:go_list_type = "quickfix"
 	let g:go_auto_type_info = 1
@@ -244,6 +244,7 @@ if dein#tap('vim-go')
 	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 	let g:go_metalinter_autosave_enabled = ['golint']
 	let g:go_metalinter_autosave = 1
+	let g:go_def_mode = 'godef'  " gopls faster than guru
 
 	autocmd MyAutoCmd FileType go
 		\   nmap <C-]> <Plug>(go-def)
@@ -411,8 +412,13 @@ if dein#tap('vim-pydocstring')
 endif
 
 if dein#tap('python-mode')
+	" 注意如果使用了 rope 一般是项目根目录打开文件，不要切到子目录
+	" set noautochdir 注意这个自动切换目录会使rope找目录不正确，禁用，坑死我
+	" 如果你发现找不到你的 package 或者系统的，编辑你的代码根目录下 .ropeproject/config.py 里的文件就可以了
+	" 比如加上 prefs.add('python_path', '/usr/local/lib/python2.7/site-packages/') 就可以找到系统包了
+
 	" when PYTHON_VERSION env variable is set, use python2. default Use python3
-	" ch: 如果设置了 PYTHON_VERSION=2 环境变量使用 python2 ，否则默认 python3
+	" ch: 如果设置了 export PYTHON_VERSION=2 环境变量使用 python2 ，否则默认 python3
 	if $PYTHON_VERSION == '2'
 		let g:pymode_python = 'python'  " Values are `python`, `python3`, `disable`.
 	else
@@ -424,7 +430,7 @@ if dein#tap('python-mode')
 	let g:pymode_indent = 1
 	let g:pymode_folding = 1
 	let g:pymode_breakpoint = 1
-	let g:pymode_breakpoint_bind = "<C-k>"
+	let g:pymode_breakpoint_bind = "<C-d>"  " NOTE: use ctrl+d insert ipdb
 	let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()  # BREAKPOINT TODO REMOVE; from nose.tools import set_trace; set_trace()'
 
 	let g:pymode_run = 1
