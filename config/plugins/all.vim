@@ -244,7 +244,6 @@ if dein#tap('vim-go')
 	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 	let g:go_metalinter_autosave_enabled = ['golint']
 	let g:go_metalinter_autosave = 1
-	let g:go_def_mode = 'godef'  " gopls faster than guru
 
 	autocmd MyAutoCmd FileType go
 		\   nmap <C-]> <Plug>(go-def)
