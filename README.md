@@ -75,6 +75,7 @@ Enjoy!
 - Node.js based linters:
 
 ```sh
+npm -g install yarn  # note: install markdown-preview.nvim need yarn
 npm -g install jshint jsxhint jsonlint stylelint sass-lint
 npm -g install raml-cop markdownlint-cli write-good
 ```
