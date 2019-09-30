@@ -1,0 +1,55 @@
+- repo: sbdchd/neoformat
+- repo: ntpeters/vim-better-whitespace
+- repo: lfv89/vim-interestingwords
+- repo: terryma/vim-multiple-cursors
+- repo: tpope/vim-repeat
+- repo: jszakmeister/vim-togglecursor
+- repo: rking/ag.vim
+- repo: mhinz/vim-startify
+- repo: rykka/riv.vim
+- repo: tpope/vim-fugitive
+- repo: junegunn/gv.vim    # git commit browser
+- repo: vim-scripts/BufOnly.vim
+- repo: godlygeek/tabular
+# - repo: jiangmiao/auto-pairs
+# - repo: kien/rainbow_parentheses.vim
+- repo: ctrlpvim/ctrlp.vim
+- repo: haya14busa/incsearch.vim
+- repo: haya14busa/incsearch-fuzzy.vim
+- repo: bling/vim-airline
+# - repo: vim-airline/vim-airline-themes
+- repo: Yggdroot/indentLine
+- repo: tpope/vim-surround
+- repo: junegunn/vim-easy-align
+- repo: Valloric/MatchTagAlways
+
+
+# pip install https://github.com/Rykka/instant-rst.py/archive/master.zip
+- { repo: Rykka/InstantRst, on_ft: rst}
+- { repo: PegasusWang/RST-Tables, on_ft: rst}
+- { repo: iamcco/mathjax-support-for-mkdp, on_ft: markdown}
+
+- repo: iamcco/markdown-preview.nvim
+  on_ft: [ markdown, pandoc.markdown, rmd ]
+  build: cd app & npm install
+
+# Python related
+- { repo: python-mode/python-mode, on_ft: python}
+
+
+- repo: easymotion/vim-easymotion
+  on_map: { n: <Plug> }
+  hook_source: |
+    let g:EasyMotion_do_mapping = 0
+    let g:EasyMotion_prompt = 'Jump to → '
+    let g:EasyMotion_keys = 'fjdksweoavn'
+    let g:EasyMotion_smartcase = 1
+    let g:EasyMotion_use_smartsign_us = 1
+
+- repo: majutsushi/tagbar
+  on_cmd: TagbarToggle
+  hook_source: |
+    let g:tagbar_width = 40
+    if executable('jsctags')
+      let g:tagbar_type_javascript = { 'ctagsbin': 'jsctags' }
+    endif
