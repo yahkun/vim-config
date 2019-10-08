@@ -16,13 +16,15 @@
 - repo: ctrlpvim/ctrlp.vim
 - repo: haya14busa/incsearch.vim
 - repo: haya14busa/incsearch-fuzzy.vim
-- repo: bling/vim-airline
+- repo: vim-airline/vim-airline
 - repo: vim-airline/vim-airline-themes
 - repo: Yggdroot/indentLine
 - repo: tpope/vim-surround
 - repo: junegunn/vim-easy-align
 - repo: Valloric/MatchTagAlways
 
+# tencent jce file
+- { repo: tenfyzhong/jce-highlight, on_ft: jce}
 
 # pip install https://github.com/Rykka/instant-rst.py/archive/master.zip
 - { repo: Rykka/InstantRst, on_ft: rst}
