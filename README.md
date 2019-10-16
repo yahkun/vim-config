@@ -130,6 +130,7 @@ On macOS with Homebrew, choose one of the [Nerd Fonts],
 for example, to install the [Hack](https://sourcefoundry.org/hack/) font:
 
 ```bash
+# NOTE：注意使用 defx 依赖 nerd-font，如果你不想安装 nerdfont，请切换到 server 分之使用 nerdtree
 brew tap homebrew/cask-fonts
 brew search nerd-font
 brew cask install font-hack-nerd-font
@@ -540,7 +541,7 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 
 Note that,
 
-* Leader key is set as <kbd>Space</kbd>
+* Leader key is set as <kbd>Space</kbd> (注意我改成了 <kbd>,</kbd>)
 * Local-leader is set as <kbd>;</kbd> and used for navigation and search mostly
   (Denite and Defx)
 
