@@ -239,10 +239,9 @@ if dein#tap('vim-go')
 	autocmd FileType go nmap <C-i> <Plug>(go-imports)
 	" let g:go_list_type = "quickfix"
 	let g:go_auto_type_info = 1
+	" use guru 否则可能渲染出错，一直提示 "type enter oo command to continue"
+	let g:go_info_mode='guru'
 	autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
-	let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-	let g:go_metalinter_autosave_enabled = ['golint']
-	let g:go_metalinter_autosave = 1
 
 	autocmd user_events FileType go
 		\   nmap <C-]> <Plug>(go-def)

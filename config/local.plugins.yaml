@@ -8,6 +8,7 @@
 - repo: mhinz/vim-startify
 - repo: rykka/riv.vim
 - repo: tpope/vim-fugitive
+- repo: tpope/vim-abolish
 - repo: junegunn/gv.vim    # git commit browser
 - repo: vim-scripts/BufOnly.vim
 - repo: godlygeek/tabular
@@ -55,3 +56,7 @@
     if executable('jsctags')
       let g:tagbar_type_javascript = { 'ctagsbin': 'jsctags' }
     endif
+
+# enable ycm if you write cpp
+# - repo: Valloric/YouCompleteMe
+#   build: ./install.py --clang-completer
