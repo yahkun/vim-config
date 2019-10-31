@@ -9,6 +9,7 @@
 - repo: rykka/riv.vim
 - repo: tpope/vim-fugitive
 - repo: tpope/vim-abolish
+- repo: tpope/vim-projectionist
 - repo: junegunn/gv.vim    # git commit browser
 - repo: vim-scripts/BufOnly.vim
 - repo: godlygeek/tabular
