@@ -13,7 +13,6 @@
 - repo: junegunn/gv.vim    # git commit browser
 - repo: vim-scripts/BufOnly.vim
 - repo: godlygeek/tabular
-# - repo: jiangmiao/auto-pairs
 # - repo: kien/rainbow_parentheses.vim
 - repo: ctrlpvim/ctrlp.vim
 - repo: haya14busa/incsearch.vim

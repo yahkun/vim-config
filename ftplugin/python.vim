@@ -6,4 +6,3 @@ setlocal textwidth=120
 setlocal expandtab
 setlocal smarttab
 setlocal nosmartindent
-setlocal matchpairs-=<:>     " do not auto complete <>
