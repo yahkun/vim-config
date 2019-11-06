@@ -493,7 +493,7 @@
   hook_source: |
     let g:delimitMate_expand_cr = 1
     let g:delimitMate_excluded_ft = 'html'
-    autocmd FileType go,python let b:delimitMate_matchpairs = "(:),[:],{:}"  # remove <> auto pair
+    autocmd FileType go,python let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 # ==========================================
 # Denite
