@@ -128,7 +128,8 @@ if dein#tap('vim-edgemotion')
 endif
 
 if dein#tap('vim-quickhl')
-	nmap mt <Plug>(quickhl-manual-this)
+	" nmap mt <Plug>(quickhl-manual-this)
+	nmap mt <Plug>(quickhl-manual-this-whole-word)
 	xmap mt <Plug>(quickhl-manual-this)
 	nmap mC <Plug>(quickhl-manual-reset)
 endif
