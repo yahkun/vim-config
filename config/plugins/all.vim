@@ -130,6 +130,7 @@ endif
 if dein#tap('vim-quickhl')
 	nmap mt <Plug>(quickhl-manual-this)
 	xmap mt <Plug>(quickhl-manual-this)
+	nmap mC <Plug>(quickhl-manual-reset)
 endif
 
 if dein#tap('vim-sidemenu')
@@ -561,12 +562,6 @@ if dein#tap('rainbow_parentheses.vim')
 	au Syntax * RainbowParenthesesLoadRound
 	au Syntax * RainbowParenthesesLoadSquare
 	au Syntax * RainbowParenthesesLoadBraces
-endif
-
-if dein#tap('vim-interestingwords')
-	" https://github.com/lfv89/vim-interestingwords 高亮感兴趣的 word
-	nnoremap <silent> <leader>f :call InterestingWords('n')<cr>
-	nnoremap <silent> <leader>F :call UncolorAllWords()<cr>
 endif
 
 if dein#tap('vim-startify')

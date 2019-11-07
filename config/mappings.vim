@@ -341,8 +341,8 @@ nnoremap tt :tab split<CR>
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
 
-" 用 ,a 搜索当前 cursor 下单词
-noremap <leader>a :Ag! -w "<cword>"<cr>
+" 用 ,f 搜索当前 cursor 下单词
+noremap <leader>f :Ag! -w "<cword>"<cr>
 
 " add :FormatJSON command, https://coderwall.com/p/faceag/format-json-in-vim
 com! FormatJSON %!python3 -c "import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=2))"
