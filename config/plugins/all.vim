@@ -388,19 +388,6 @@ if dein#tap('vim-textobj-function')
 	xmap <silent> if <Plug>(textobj-function-i)
 endif
 
-if dein#tap('tagbar')
-	nnoremap <silent> <Leader>o   :<C-u>TagbarOpenAutoClose<CR>
-	" sort by sourcefile
-	let g:tagbar_sort = 0
-
-	" Also use h/l to open/close folds
-	let g:tagbar_map_closefold = ['h', '-', 'zc']
-	let g:tagbar_map_openfold = ['l', '+', 'zo']
-	" for Tagbarbar, sudo apt-get install ctags
-	nnoremap <silent> <F8> :TagbarToggle<CR>
-	nnoremap <leader>t :TagbarToggle<CR>
-endif
-
 if dein#tap('vim-easymotion')
 	map <Leader><Leader>w <Plug>(easymotion-w)
 	map <Leader><Leader>f <Plug>(easymotion-f)
