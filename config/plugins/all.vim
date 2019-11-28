@@ -128,10 +128,9 @@ if dein#tap('vim-edgemotion')
 endif
 
 if dein#tap('vim-quickhl')
-	" nmap mt <Plug>(quickhl-manual-this)
-	nmap mt <Plug>(quickhl-manual-this-whole-word)
-	xmap mt <Plug>(quickhl-manual-this)
-	nmap mC <Plug>(quickhl-manual-reset)
+	nmap <Leader>mt <Plug>(quickhl-manual-this)
+	xmap <Leader>mt <Plug>(quickhl-manual-this)
+	nmap <Leader>mC <Plug>(quickhl-manual-reset)
 endif
 
 if dein#tap('vim-sidemenu')
@@ -144,6 +143,7 @@ if dein#tap('vim-indent-guides')
 endif
 
 if dein#tap('vim-signature')
+	let g:SignatureIncludeMarks = 'abcdefghijkloqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 	let g:SignatureMap = {
 		\ 'Leader':            'm',
 		\ 'ListBufferMarks':   'm/',
@@ -164,8 +164,8 @@ if dein#tap('vim-signature')
 		\ 'GotoPrevSpotByPos': 'mp',
 		\ 'GotoNextMarker':    ']-',
 		\ 'GotoPrevMarker':    '[-',
-		\ 'GotoNextMarkerAny': 'mj',
-		\ 'GotoPrevMarkerAny': 'mk',
+		\ 'GotoNextMarkerAny': ']=',
+		\ 'GotoPrevMarkerAny': '[=',
 		\ }
 endif
 
@@ -270,7 +270,7 @@ if dein#tap('phpcomplete-extended')
 endif
 
 if dein#tap('vimagit')
-	nnoremap <silent> mg :Magit<CR>
+	nnoremap <silent> <Leader>mg :Magit<CR>
 endif
 
 if dein#tap('vim-easygit')
@@ -337,10 +337,10 @@ if dein#tap('splitjoin.vim')
 endif
 
 if dein#tap('linediff.vim')
-	vnoremap mdf :Linediff<CR>
-	vnoremap mda :LinediffAdd<CR>
-	nnoremap mds :<C-u>LinediffShow<CR>
-	nnoremap mdr :<C-u>LinediffReset<CR>
+	vnoremap <Leader>mdf :Linediff<CR>
+	vnoremap <Leader>mda :LinediffAdd<CR>
+	nnoremap <Leader>mds :<C-u>LinediffShow<CR>
+	nnoremap <Leader>mdr :<C-u>LinediffReset<CR>
 endif
 
 if dein#tap('dsf.vim')
