@@ -134,6 +134,7 @@
     let g:go_highlight_string_spellcheck = 0
     let g:go_highlight_variable_declarations = 0
     let g:go_highlight_variable_assignments = 0
+    let g:go_auto_type_info = 1
 
 # Python related
 - { repo: vim-python/python-syntax, on_ft: python }
