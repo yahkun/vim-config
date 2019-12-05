@@ -1,5 +1,6 @@
-" deoplete
+" :h deoplete
 " ---
+" Problems? https://github.com/Shougo/deoplete.nvim/issues
 
 " For debugging:
 " call deoplete#custom#option('profile', v:true)
@@ -11,8 +12,6 @@
 call deoplete#custom#option({
 	\ 'max_list': 10000,
 	\ 'min_pattern_length': 1,
-	\ 'auto_complete_delay': 200,
-	\ 'auto_refresh_delay': 10,
 	\ 'auto_preview': v:true,
 	\ 'smart_case': v:true,
 	\ 'skip_multibyte': v:true,
@@ -28,7 +27,7 @@ let g:deoplete#sources#jedi#short_types = 1
 let g:deoplete#sources#ternjs#filetypes = [
 	\ 'jsx',
 	\ 'javascript',
-	\ 'javascript.jsx',
+	\ 'javascriptreact',
 	\ 'vue',
 	\ ]
 
@@ -99,15 +98,13 @@ call deoplete#custom#source('syntax',        'rank', 50)
 call deoplete#custom#source('_', 'matchers',
 	\ [ 'matcher_fuzzy', 'matcher_length' ])
 
-call deoplete#custom#source('denite', 'matchers',
-	\ ['matcher_full_fuzzy', 'matcher_length'])
-
-call deoplete#custom#source('_', 'converters', [
-	\   'converter_remove_overlap',
-	\   'matcher_length',
-	\   'converter_truncate_abbr',
-	\   'converter_truncate_menu',
-	\ ])
+" call deoplete#custom#source('_', 'converters', [
+"	\   'converter_remove_overlap',
+"	\   'matcher_length',
+"	\   'converter_truncate_abbr',
+"	\   'converter_truncate_info',
+"	\   'converter_truncate_menu',
+"	\ ])
 
 call deoplete#custom#source('denite', 'matchers',
 	\ ['matcher_full_fuzzy', 'matcher_length'])
@@ -151,14 +148,14 @@ inoremap <silent><expr><CR> pumvisible() ? deoplete#close_popup()
 " 3. Otherwise, if preceding chars are whitespace, insert tab char
 " 4. Otherwise, start manual autocomplete
 imap <silent><expr><Tab>
-	\ neosnippet#jumpable() ? "\<Plug>(neosnippet_jump)"
+	\ pumvisible() ? "\<Down>"
+	\ : (neosnippet#jumpable() ? "\<Plug>(neosnippet_jump)"
 	\ : (<SID>is_whitespace() ? "\<Tab>"
-	\ : (pumvisible() ? "\<Down>"
 	\ : deoplete#manual_complete()))
 
 smap <silent><expr><Tab>
-	\ neosnippet#jumpable() ? "\<Plug>(neosnippet_jump)"
-	\ : (pumvisible() ? "\<Down>"
+	\ pumvisible() ? "\<Down>"
+	\ : (neosnippet#jumpable() ? "\<Plug>(neosnippet_jump)"
 	\ : (<SID>is_whitespace() ? "\<Tab>"
 	\ : deoplete#manual_complete()))
 

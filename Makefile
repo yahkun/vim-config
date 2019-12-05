@@ -9,14 +9,13 @@ install:
 	@mkdir -vp "$(XDG_CACHE_HOME)/vim/"{backup,session,swap,tags,undo}; \
 	$(vim) -V1 -es -i NONE -N -u config/init.vim -c "try | call dein#update() | finally | echomsg '' | qall! | endtry"
 
-silent_install:
-	@mkdir -vp "$(XDG_CACHE_HOME)/vim/"{backup,session,swap,tags,undo}; \
-	$(vim) --cmd 'set t_ti= t_te= nomore' -N -U NONE -i NONE \
-		-c "try | call dein#update() | finally | qall! | endtry"
+update-repo:
+	@git pull --ff --ff-only
 
-update:
-	@git pull --ff --ff-only; \
+update-plugins:
 	$(vim) -V1 -es -i NONE -N -u config/init.vim -c "try | call dein#clear_state() | call dein#update() | finally | qall! | endtry"
+
+update: update-repo update-plugins
 
 upgrade: update
 
@@ -42,5 +41,4 @@ else
 endif
 	@echo All tests passed, hooray!
 
-
-.PHONY: install silent_install update upgrade uninstall test
+.PHONY: install update-repo update-plugins update upgrade uninstall test
