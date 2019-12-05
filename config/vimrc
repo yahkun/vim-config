@@ -71,7 +71,8 @@ call s:source_file('config/plugins/all.vim')
 call s:source_file('config/general.vim')
 call s:source_file('config/filetype.vim')
 call s:source_file('config/mappings.vim')
-call s:source_file('config/theme.vim')
+" call s:source_file('config/theme.vim')
+colorscheme hybrid_reverse  " change to your favorite theme
 
 " Load user custom local settings
 if filereadable($VIM_PATH . '/config/local.vim')
