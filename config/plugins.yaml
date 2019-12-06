@@ -135,6 +135,7 @@
     let g:go_highlight_variable_declarations = 0
     let g:go_highlight_variable_assignments = 0
     let g:go_auto_type_info = 1
+    let g:go_fmt_command = "goimports"
 
 # Python related
 - { repo: vim-python/python-syntax, on_ft: python }
