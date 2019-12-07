@@ -379,7 +379,7 @@ if dein#tap('vim-easymotion')
 	nmap ss <Plug>(easymotion-s2)
 endif
 
-if dein#tap('vim-easymotion')
+if dein#tap('vim-airline')
 	let g:airline_powerline_fonts=1
 	let g:airline_theme = 'wombat'
 	let g:airline#extensions#tabline#enabled = 1
