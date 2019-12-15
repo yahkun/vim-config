@@ -136,6 +136,8 @@
     let g:go_highlight_variable_assignments = 0
     let g:go_auto_type_info = 1
     let g:go_fmt_command = "goimports"
+    let g:go_def_reuse_buffer = 1
+    au FileType go nmap fd <Plug>(go-def-vertical)
 
 # Python related
 - { repo: vim-python/python-syntax, on_ft: python }
