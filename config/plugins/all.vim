@@ -394,4 +394,10 @@ if dein#tap('vim-airline')
 	endfunction
 endif
 
+if dein#tap('incsearch-fuzzy.vim')
+	map z/ <Plug>(incsearch-fuzzy-/)
+	map z? <Plug>(incsearch-fuzzy-?)
+	map zg/ <Plug>(incsearch-fuzzy-stay)
+endif
+
 " vim: set ts=2 sw=2 tw=80 noet :
