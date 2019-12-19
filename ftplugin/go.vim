@@ -4,3 +4,6 @@ setlocal tabstop=4
 iabbrev mian() main()
 iabbrev fucn func
 iabbrev Pirntln Println
+iabbrev errror error
+iabbrev itnerface interface
+iabbrev cosnt const
