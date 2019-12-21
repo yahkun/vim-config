@@ -12,3 +12,4 @@ iabbrev imoprt import
 iabbrev contineu continue
 iabbrev dfer defer
 iabbrev caes case
+iabbrev rnage range
