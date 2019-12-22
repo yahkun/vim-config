@@ -248,6 +248,7 @@ if dein#tap('vim-go')
 		\ | nmap <Leader>gor  <Plug>(go-run)
 		\ | nmap <Leader>gov  <Plug>(go-vet)
 		\ | nmap <Leader>gtf  <Plug>(go-test-func)
+		\ | nmap fd  <Plug>(go-def-vertical)
 endif
 
 if dein#tap('phpcomplete-extended')
