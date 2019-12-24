@@ -892,3 +892,16 @@ eggs/
 *.swp
 *.pyc
 ```
+
+### fzf.vim :Ag 搜索结果发送到 quickfix 窗口
+
+使用 fzf.vim 有个 :Ag 命令搜索的时候可以把结果发送到 quickfix 窗口。通常搜索结果可以使用 ctrl+n/p 来选择
+
+使用方式：
+
+- :Ag 搜索需要的单词
+- alt-a 全选 (注意 MacOS iterm2: Settings -> Profiles -> Keys Left Option choose Esc+)
+- alt-d 取消选择
+- enter 即可
+
+https://github.com/junegunn/fzf.vim/issues/586

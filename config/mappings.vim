@@ -341,8 +341,8 @@ nnoremap tt :tab split<CR>
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
 
-" 用 ,f 搜索当前 cursor 下单词
-noremap <leader>f :Ag! -w "<cword>"<cr>
+" 用 leader+ag 搜索当前 cursor 下单词 see: https://github.com/junegunn/fzf.vim/issues/50
+nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
 
 " add :FormatJSON command, https://coderwall.com/p/faceag/format-json-in-vim
 com! FormatJSON %!python3 -c "import json, sys, collections; print(json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), ensure_ascii=False, indent=2))"
