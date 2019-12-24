@@ -3,10 +3,10 @@
 - repo: terryma/vim-multiple-cursors
 - repo: tpope/vim-repeat
 - repo: jszakmeister/vim-togglecursor
-- repo: rking/ag.vim
+# - repo: rking/ag.vim
 - repo: mhinz/vim-startify
 - repo: rykka/riv.vim
-- repo: tpope/vim-fugitive
+# - repo: tpope/vim-fugitive
 - repo: tpope/vim-abolish
 - repo: tpope/vim-projectionist
 - repo: junegunn/gv.vim    # git commit browser
