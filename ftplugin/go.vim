@@ -11,5 +11,6 @@ iabbrev retunr return
 iabbrev imoprt import
 iabbrev contineu continue
 iabbrev dfer defer
+iabbrev defalut default
 iabbrev caes case
 iabbrev rnage range
