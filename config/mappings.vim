@@ -363,15 +363,9 @@ set noautochdir    " 注意这个自动切换目录会使rope找目录不正确�
 
 " 退出快捷键
 inoremap jj <Esc>`^
-inoremap hhh <Esc>`^
-inoremap kkk <Esc>`^
-inoremap lll <Esc>`^
-inoremap ooo <Esc>`^o
-inoremap <C-k> <Esc>`^
 noremap <leader>e :q<cr>
 noremap <leader>E :qa!<cr>
 noremap <leader>b :bd<cr>
-noremap <leader>s :vs %<cr>  " vertical split
 noremap <leader>r :e!<cr>  " reload without save
 
 " omni Completion
