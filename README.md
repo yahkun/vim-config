@@ -905,3 +905,8 @@ eggs/
 - enter 即可
 
 https://github.com/junegunn/fzf.vim/issues/586
+
+### [Coc.Nvim](https://github.com/neoclide/coc.nvim)
+
+If you want to use [coc.nvim](https://github.com/neoclide/coc.nvim) for Golang completion, 
+please see this article [《vim as a go ide》](https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/)
