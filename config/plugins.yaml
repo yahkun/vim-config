@@ -387,10 +387,10 @@
 # Completion
 # ----------
 
-#- repo: neoclide/coc.nvim
-#  merge: 0
-#  rev: release
-#  hook_source: source $VIM_PATH/config/plugins/coc.vim
+- repo: neoclide/coc.nvim
+  merge: 0
+  rev: release
+  hook_source: source $VIM_PATH/config/plugins/coc.vim
 
 - repo: Shougo/deoplete.nvim
   depends: context_filetype.vim
@@ -399,10 +399,10 @@
     source $VIM_PATH/config/plugins/deoplete.vim
     call deoplete#enable()
 
-- repo: deoplete-plugins/deoplete-go
-  build: make
-  on_ft: go
-  on_event: InsertEnter
+# - repo: deoplete-plugins/deoplete-go
+#   build: make
+#   on_ft: go
+#   on_event: InsertEnter
 
 - repo: deoplete-plugins/deoplete-jedi
   on_ft: python
