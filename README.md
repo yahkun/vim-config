@@ -888,6 +888,7 @@ gen-py/
 gen-go/
 eggs/
 .tmp/
+vendor/
 
 *.swp
 *.pyc
@@ -899,14 +900,16 @@ eggs/
 
 使用方式：
 
-- :Ag 搜索需要的单词
+- :Ag 搜索需要的单词。`:Ag word`
 - alt-a 全选 (注意 MacOS iterm2: Settings -> Profiles -> Keys Left Option choose Esc+)
-- alt-d 取消选择
-- enter 即可
+- alt-d 可以取消选择
+- Enter 即可，这时候就可以把搜索结果发送到 quickfix 窗口
 
-https://github.com/junegunn/fzf.vim/issues/586
+ref: https://github.com/junegunn/fzf.vim/issues/586
 
 ### [Coc.Nvim](https://github.com/neoclide/coc.nvim)
 
 If you want to use [coc.nvim](https://github.com/neoclide/coc.nvim) for Golang completion, 
-please see this article [《vim as a go ide》](https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/)
+please see this article [《vim as a go ide》](https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/).
+Now you can use `coc` branch for go completion(use gopls). If you use python, type `CocInstall coc-python` install
+python coc plugin.
