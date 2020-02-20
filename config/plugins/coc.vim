@@ -1,23 +1,15 @@
 " coc.nvim settings
 " ---
 
-" Don't load the defx-git plugin file, not needed
-let b:defx_git_loaded = 1
-let g:coc_global_extensions = ['coc-snippets' ,'coc-python', 'coc-json']
+let g:coc_global_extensions = ['coc-snippets', 'coc-python', 'coc-json']
 
-" Use <Tab> for trigger completion and navigate to the next complete item
-let g:coc_snippet_next = '<tab>'
-inoremap <silent><expr> <Tab>
-	\ pumvisible() ? "\<C-n>" :
-	\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-	\ <SID>check_back_space() ? "\<Tab>" :
-	\ coc#refresh()
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() :
-	\ delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" :
-	\"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! s:check_back_space() abort
 	let col = col('.') - 1

@@ -390,7 +390,7 @@
 - repo: neoclide/coc.nvim
   merge: 0
   rev: release
-  hook_source: source $VIM_PATH/config/plugins/coc.vim
+  hook_add: source $VIM_PATH/config/plugins/coc.vim
 
 - repo: Shougo/deoplete.nvim
   if: 0
