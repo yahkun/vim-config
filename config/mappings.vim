@@ -47,6 +47,7 @@ nnoremap <S-Return> zMzvzt
 
 " Start new line from any cursor position in insert-mode
 inoremap <S-Return> <C-o>o
+inoremap <C-j> <C-o>o
 
 " The plugin rhysd/accelerated-jk moves through display-lines in normal mode,
 " these mappings will move through display-lines in visual mode too.
@@ -366,7 +367,8 @@ inoremap jj <Esc>`^
 noremap <leader>e :q<cr>
 noremap <leader>E :qa!<cr>
 noremap <leader>b :bd<cr>
-noremap <leader>r :e!<cr>  " reload without save
+" reload without save
+noremap <leader>r :e!<cr>
 
 " omni Completion
 inoremap <C-Space> <C-x><C-o>
