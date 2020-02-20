@@ -3,6 +3,7 @@
 
 " Don't load the defx-git plugin file, not needed
 let b:defx_git_loaded = 1
+let g:coc_global_extensions = ['coc-snippets' ,'coc-python', 'coc-json']
 
 " Use <Tab> for trigger completion and navigate to the next complete item
 let g:coc_snippet_next = '<tab>'

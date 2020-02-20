@@ -1,4 +1,4 @@
-- repo: sbdchd/neoformat
+# - repo: sbdchd/neoformat
 - repo: ntpeters/vim-better-whitespace
 - repo: terryma/vim-multiple-cursors
 - repo: tpope/vim-repeat
@@ -21,6 +21,7 @@
 - repo: tpope/vim-surround
 - repo: junegunn/vim-easy-align
 - repo: Valloric/MatchTagAlways
+- repo: honza/vim-snippets
 
 - repo: Yggdroot/indentLine
   hook_add: |
