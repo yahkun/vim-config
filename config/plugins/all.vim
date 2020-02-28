@@ -163,6 +163,7 @@ if dein#tap('vim-go')
 		\ | nmap <Leader>goe  <Plug>(go-referrers)
 		\ | nmap <Leader>gor  <Plug>(go-run)
 		\ | nmap <Leader>gov  <Plug>(go-vet)
+		\ | nmap fd  <Plug>(go-def-vertical)
 endif
 
 if dein#tap('iron.nvim')

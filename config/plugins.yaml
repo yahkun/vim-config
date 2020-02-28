@@ -136,7 +136,7 @@
   if: has('nvim-0.3.2') || has('patch-8.0.1453')
   on_ft: [ go, gomod ]
   hook_add: |
-    let g:go_gopls_enabled = 0
+    let g:go_gopls_enabled = 1
     let g:go_code_completion_enabled = 0
     let g:go_doc_keywordprg_enabled = 0
     let g:go_def_mapping_enabled = 0
@@ -261,7 +261,7 @@
   hook_add: let g:vmt_auto_update_on_save = 0
 
 - repo: tpope/vim-fugitive
-  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit ]
+  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit, Gblame ]
   hook_source:
     augroup user_fugitive_plugin
       autocmd!
@@ -496,38 +496,38 @@
 #       \ 'completor': function('asyncomplete#sources#file#completor')
 #       \ }))
 
-- repo: wellle/tmux-complete.vim
-  if: "! (has('win32') || has('win64'))"
-  depends: asyncomplete.vim
-  hook_add: |
-    let g:tmuxcomplete#trigger = ''
-    let g:tmuxcomplete#asyncomplete_source_options = {
-      \ 'name': 'tmux',
-      \ 'priority': 0,
-      \ 'whitelist': ['*'],
-      \ 'blacklist': ['denite-filter', 'clap_input'],
-      \ 'config': {
-      \   'splitmode': 'words',
-      \   'filter_prefix': 1,
-      \   'show_incomplete': 1,
-      \   'sort_candidates': 0,
-      \   'scrollback': 0,
-      \   'truncate': 0
-      \   }
-      \ }
-
-- repo: prabirshrestha/asyncomplete-ultisnips.vim
-  depends: asyncomplete.vim
-  if: has('python3')
-  hook_source: |
-    autocmd User asyncomplete_setup call asyncomplete#register_source(
-      \ asyncomplete#sources#ultisnips#get_source_options({
-      \ 'name': 'snip',
-      \ 'priority': 0,
-      \ 'whitelist': ['*'],
-      \ 'blacklist': ['denite-filter', 'clap_input'],
-      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-      \ }))
+# - repo: wellle/tmux-complete.vim
+#   if: "! (has('win32') || has('win64'))"
+#   depends: asyncomplete.vim
+#   hook_add: |
+#     let g:tmuxcomplete#trigger = ''
+#     let g:tmuxcomplete#asyncomplete_source_options = {
+#       \ 'name': 'tmux',
+#       \ 'priority': 0,
+#       \ 'whitelist': ['*'],
+#       \ 'blacklist': ['denite-filter', 'clap_input'],
+#       \ 'config': {
+#       \   'splitmode': 'words',
+#       \   'filter_prefix': 1,
+#       \   'show_incomplete': 1,
+#       \   'sort_candidates': 0,
+#       \   'scrollback': 0,
+#       \   'truncate': 0
+#       \   }
+#       \ }
+#
+# - repo: prabirshrestha/asyncomplete-ultisnips.vim
+#   depends: asyncomplete.vim
+#   if: has('python3')
+#   hook_source: |
+#     autocmd User asyncomplete_setup call asyncomplete#register_source(
+#       \ asyncomplete#sources#ultisnips#get_source_options({
+#       \ 'name': 'snip',
+#       \ 'priority': 0,
+#       \ 'whitelist': ['*'],
+#       \ 'blacklist': ['denite-filter', 'clap_input'],
+#       \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+#       \ }))
 
 - repo: SirVer/ultisnips
   if: has('python3')
@@ -555,6 +555,7 @@
     let g:ale_sign_error = '✖'
     let g:ale_sign_warning = 'ⁱ'
     let g:ale_maximum_file_size = 500000
+    let g:ale_go_gometalinter_executable = 'gometalinter'
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
