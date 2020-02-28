@@ -6,10 +6,8 @@
 # - repo: rking/ag.vim
 - repo: mhinz/vim-startify
 - repo: rykka/riv.vim
-- repo: tpope/vim-fugitive
 - repo: tpope/vim-abolish
 - repo: tpope/vim-projectionist
-- repo: junegunn/gv.vim    # git commit browser
 - repo: vim-scripts/BufOnly.vim
 - repo: godlygeek/tabular
 # - repo: kien/rainbow_parentheses.vim
@@ -21,7 +19,6 @@
 - repo: tpope/vim-surround
 - repo: junegunn/vim-easy-align
 - repo: Valloric/MatchTagAlways
-- repo: honza/vim-snippets
 
 - repo: Yggdroot/indentLine
   hook_add: |
