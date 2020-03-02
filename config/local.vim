@@ -35,7 +35,10 @@ map <F4> :%retab! <CR> :w <CR>
 
 " 退出快捷键
 inoremap jj <Esc>`^
+" move to next line (insert mode)
 inoremap <C-j> <C-o>o
+" move to end (insert mode)
+inoremap <C-l> <C-o>A
 noremap <leader>e :q<cr>
 noremap <leader>E :qa!<cr>
 noremap <leader>b :bd<cr>
