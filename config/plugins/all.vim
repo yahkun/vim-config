@@ -457,21 +457,14 @@ if dein#tap('python-mode')
 	let g:pymode_virtualenv = 1
 	let g:pymode_virtualenv_path = $VIRTUAL_ENV
 
-	" Override view python doc key shortcut to Ctrl-Shift-d
-	let g:pymode_doc=1
-	let g:pymode_doc_bind = 'K'
-
-	autocmd CompleteDone * pclose
-	autocmd FileType python setlocal omnifunc=RopeCompleteFunc
-	" WARNING: rope complete conflict with jedi, choose one of them
-	let g:pymode_rope = 1
+	" use coc.nvim, disalbe rope
+	let g:pymode_rope = 0
 	let g:pymode_rope_autoimport = 0
 	let g:pymode_rope_complete_on_dot = 0
 	let g:pymode_rope_lookup_project = 0
 	let g:pymode_rope_goto_definition_bind = "<C-]>"
 	let g:pymode_rope_goto_definition_cmd = 'vnew'
 	let g:pymode_rope_regenerate_on_write = 0
-	" command PR PymodeRopeRegenerate
 
 	let g:pymode_lint = 1
 	let g:pymode_lint_on_write = 1
@@ -483,9 +476,6 @@ if dein#tap('python-mode')
 	let g:pymode_lint_signs = 1
 	" if you want use emoji you shoud set : Iterm2->Profiles->Text->Use Unicode versoin 9 widths
 	let g:pymode_lint_todo_symbol = '😡'
-	" let g:pymode_lint_error_symbol = '❌'
-	" let g:pymode_lint_comment_symbol = '😢'
-	" let g:pymode_lint_comment_symbol = "❗"
 	let g:pymode_lint_error_symbol = "\U2717"
 	let g:pymode_lint_comment_symbol = "\u2757"
 	let g:pymode_lint_visual_symbol = "\u0021"
@@ -497,9 +487,8 @@ if dein#tap('python-mode')
 	let g:pymode_options_colorcolumn = 1
 	" 指定UltiSnips python的docstring风格, sphinx, google, numpy
 	let g:ultisnips_python_style = 'sphinx'
-	" http://stackoverflow.com/questions/16021297/how-to-map-alias-a-command-in-vim, PymodeLint映射成PL
-	" command PLT PymodeLint
-	" command PLA PymodeLintAuto    " auto fix pep8
+	" use leader+f auto format pep8 python file
+	autocmd user_events FileType python nnoremap <silent> <Leader>f :<C-u>PymodeLintAuto<CR>
 endif
 
 " vim: set ts=2 sw=2 tw=80 noet :
