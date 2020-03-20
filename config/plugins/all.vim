@@ -491,4 +491,9 @@ if dein#tap('python-mode')
 	autocmd user_events FileType python nnoremap <silent> <Leader>f :<C-u>PymodeLintAuto<CR>
 endif
 
+if dein#tap('fzf.vim')
+	nnoremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+	nnoremap <silent> <c-p> :Files <CR>
+endif
+
 " vim: set ts=2 sw=2 tw=80 noet :
