@@ -91,7 +91,7 @@ we'll also symlink it for regular Vim:
 
 ```bash
 mkdir ~/.config
-git clone git://github.com/rafi/vim-config.git ~/.config/nvim
+git clone git://github.com/PegasusWang/vim-config.git ~/.config/nvim
 cd ~/.config/nvim
 ln -s ~/.config/nvim ~/.vim  # For "regular" Vim
 ```
@@ -570,7 +570,7 @@ _Note_ that 95% of the plugins are **[lazy-loaded]**.
 
 Note that,
 
-* **Leader** key set as <kbd>Space</kbd>
+* **Leader** key set as <kbd>,</kbd>
 * **Local-Leader** key set as <kbd>;</kbd> and used for navigation and search
   (Denite and Defx)
 * Disable <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd> in normal mode by enabling `g:elite_mode` in `.vault.vim`
