@@ -1,7 +1,7 @@
-" Write buffer (save)
-imap ,w <esc>:w<CR>
+" Write buffer (insert mode)
+imap <Leader>w <esc>:w<CR>
 
-" 切换 buffer
+" switch buffer
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> [n :bnext<CR>
 
@@ -11,7 +11,6 @@ if &diff
     map <leader>2 :diffget BASE<CR>
     map <leader>3 :diffget REMOTE<CR>
 endif
-
 
 " change tab
 nnoremap <C-Left> :tabprevious<CR>
@@ -30,7 +29,7 @@ com! FormatJSONPy2Utf8 %!python -c "import json, sys, collections; print json.du
 
 map <F4> :%retab! <CR> :w <CR>
 
-" 退出快捷键
+" use jj as esc
 inoremap jj <Esc>`^
 " move to next line (insert mode)
 inoremap <C-j> <C-o>o
@@ -43,6 +42,6 @@ noremap <leader>b :bd<cr>
 " omni Completion
 inoremap <C-Space> <C-x><C-o>
 
-" my own map config
-set noautochdir    " 注意这个自动切换目录会使rope找目录不正确，禁用，坑死我
+" disable autochdir
+set noautochdir
 set signcolumn=no
