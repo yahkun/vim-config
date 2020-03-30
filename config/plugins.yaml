@@ -272,7 +272,7 @@
   on_cmd: GV
 
 - repo: liuchengxu/vista.vim
-  on_cmd: Vista
+  # on_cmd: Vista
   hook_add: |
     let g:vista#renderer#enable_icon = 1
     let g:vista_echo_cursor_strategy = 'scroll'
