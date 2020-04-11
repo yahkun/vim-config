@@ -1,5 +1,5 @@
-" Write buffer (insert mode)
-imap <Leader>w <esc>:w<CR>
+" Update file. :update is equlivalent to :write, but it only saves the file if the buffer has been modified
+imap <Leader>w <esc>:update<CR>
 
 " switch buffer
 nnoremap <silent> [b :bprevious<CR>
