@@ -374,7 +374,7 @@
 
 - repo: nathanaelkane/vim-indent-guides
   if: 0
-  on_event: VimEnter
+  on_event: FileType
   hook_post_source: IndentGuidesEnable
   hook_add: |
     let g:indent_guides_default_mapping = 0
