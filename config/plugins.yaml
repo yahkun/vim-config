@@ -260,7 +260,7 @@
   hook_add: let g:vmt_auto_update_on_save = 0
 
 - repo: tpope/vim-fugitive
-  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit, Gblame ]
+  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit, Gblame, Gdelete]
   hook_source:
     augroup user_fugitive_plugin
       autocmd!
