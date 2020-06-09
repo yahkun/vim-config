@@ -45,3 +45,5 @@ inoremap <C-Space> <C-x><C-o>
 " disable autochdir
 set noautochdir
 set signcolumn=no
+" fix E363: pattern uses more memory than 'maxmempattern'  see: https://github.com/vim/vim/issues/2049
+set mmp=5000
