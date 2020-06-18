@@ -6,6 +6,5 @@
       "filetypes": ["go"]
     }
   },
-  "suggest.noselect": false,
   "suggest.snippetIndicator": " ⭐︎"
 }
