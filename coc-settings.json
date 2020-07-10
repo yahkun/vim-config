@@ -4,6 +4,24 @@
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
+    },
+    "ccls": {
+        "command": "ccls",
+        "args": ["--log-file=/tmp/ccls.log"],
+        "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+        "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+        "initializationOptions": {
+            "cache": {
+                "directory": ".ccls-cache"
+            },
+            "clang": {
+                "resourceDir": "$CODE_COMPLETE_CLANG_LIB_PATH"
+            },
+            "index": {
+        "trackDependency": 1 ,
+        "initialBlacklist": ["."]
+            }
+        }
     }
   },
   "suggest.snippetIndicator": " ⭐︎"
