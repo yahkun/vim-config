@@ -23,5 +23,6 @@
             }
         }
     }
-  }
+  },
+  "suggest.noselect": false
 }
